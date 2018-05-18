@@ -43,21 +43,21 @@ export function postContract(newContract) {
   }
 }
 
-export function contractChange(newContract) {
+export function changeContract(contract, id) {
   return (dispatch) => {
-    return fetch(URL + "/contracts", {
+    return fetch(URL + `/contracts/${id}`, {
       headers: headers,
       method: "PATCH",
       body: JSON.stringify({
-        title: newContract.title,
-        summary: newContract.summary,
-        details: newContract.details,
-        milestones: newContract.milestones,
-        legal: newContract.legal,
-        copyright: newContract.copyright,
-        compensation: newContract.compensation,
-        developer_id: newContract.developer_id,
-        contractor_id: newContract.contractor_id,
+        title: contract.title,
+        summary: contract.summary,
+        details: contract.details,
+        milestones: contract.milestones,
+        legal: contract.legal,
+        copyright: contract.copyright,
+        compensation: contract.compensation,
+        developer_id: contract.developer_id,
+        contractor_id: contract.contractor_id,
       })
     })
     .then(res => res.json())

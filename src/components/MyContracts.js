@@ -9,7 +9,7 @@ import NewContractForm from './NewContractForm'
 class MyContracts extends React.Component{
 
   state = {
-    currentContract: null,
+    currentContract: '',
   }
 
   componentDidMount(){
@@ -24,28 +24,18 @@ class MyContracts extends React.Component{
 
   render(){
 
-    console.log('line 26:', this.state);
 
     const myContracts = this.props.myContracts.map((contract, index) => {
       return <Contract contract={contract} index={index} key={index} setCurrentContract={this.setCurrentContract}/>
     })
 
-    // const currentContract = this.state.currentContract.map((contract, index) => {
-    //   return <NewContractForm contract={contract} index={index} key={index} />
-    // })
+    console.log('line 32:', this.props.myContracts);
 
     return(
 
+
       <div className='myContracts'>
-        <br />
-        <br />
-        <br />
-        <br />
-        <Grid divided='vertically'>
-          <Grid.Row columns={3}>
-              {this.state.currentContract === null ? myContracts : null}
-          </Grid.Row>
-        </Grid>
+          {this.state.currentContract === '' ? <Grid divided='vertically'><Grid.Row columns={3}> {myContracts} </Grid.Row></Grid> : <NewContractForm contract={this.state.currentContract} index={this.state.currentContract.id} key={this.state.currentContract.id} />}
       </div>
     )
   }

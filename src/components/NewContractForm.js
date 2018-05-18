@@ -1,16 +1,17 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {getUsers, postContract} from '../actions/actions'
+import {getUsers, postContract, changeContract} from '../actions/actions'
 
 class NewContractForm extends React.Component{
   state = {
-    title: ``,
-    summary: ``,
-    details: ``,
-    milestones: ``,
-    legal: ``,
-    copyright: ``,
-    compensation: ``,
+    id: this.props.contract ? this.props.contract.id : '',
+    title: this.props.contract ? this.props.contract.title : '',
+    summary: this.props.contract ? this.props.contract.summary : '',
+    details: this.props.contract ? this.props.contract.details : '',
+    milestones: this.props.contract ? this.props.contract.milestones : '',
+    legal: this.props.contract ? this.props.contract.legal : '',
+    copyright: this.props.contract ? this.props.contract.copyright : '',
+    compensation: this.props.contract ? this.props.contract.compensation : '',
     developer_id: 1,
     contractor_id: 1,
   }
@@ -25,13 +26,18 @@ class NewContractForm extends React.Component{
     })
   }
 
-  handleSubmit = (newContract) => {
-    this.props.postContract(newContract)
+  handleSubmit = (contract) => {
+    if(!this.props.contract){
+      this.props.postContract(contract)
+    } else {
+      console.log('in changeContract conditional', contract);
+      this.props.changeContract(contract, contract.id)
+    }
   }
 
   render(){
 
-    console.log(this.state);
+    // console.log(this.props.contract);
     // console.log('developer: ', this.state.developer_id);
     // console.log('contractor: ', this.state.contractor_id);
 
@@ -98,4 +104,4 @@ function mapStateToProps(state){
   return {users: state.users}
 }
 
-export default connect(mapStateToProps, {getUsers, postContract})(NewContractForm)
+export default connect(mapStateToProps, {getUsers, postContract, changeContract})(NewContractForm)

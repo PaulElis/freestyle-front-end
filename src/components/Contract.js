@@ -2,8 +2,6 @@ import React from 'react'
 import {connect} from 'react-redux'
 import { Grid } from 'semantic-ui-react'
 
-// import NewContractForm from './NewContractForm'
-
 class Contract extends React.Component {
 
 
