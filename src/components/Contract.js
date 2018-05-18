@@ -4,38 +4,19 @@ import { Grid } from 'semantic-ui-react'
 
 // import NewContractForm from './NewContractForm'
 
-
 class Contract extends React.Component {
 
-  state = {}
 
-  // contractChange = () => {
-  //     fetch("http://localhost:3000/api/v1/reviews",
-  //     {
-  //       headers: {
-  //         'Accept': 'application/json',
-  //         'Content-Type': 'application/json'
-  //       },
-  //       method: "POST",
-  //       body: JSON.stringify({user_id: user_id, text: text, business_id: business_id})
-  //     })
-  //     .then(r => r.json())
-  //     .then(newReview => this.setState({
-  //       reviews: [...this.state.reviews, newReview]
-  //     })
-  //   )
-  // }
-
-  handleClick = () => {
-    console.log('inHandleclick');
+  handleClick = (event) => {
+    // console.log(this.props.contract);
+    this.props.setCurrentContract(this.props.contract)
   }
 
   render(){
 
-    // console.log(this.props.contract);
+    // console.log('line 18 in Contract.js', this.props.contract);
 
     return(
-      // <NewContractForm contractChange={this.contractChange}/>
       <Grid.Column>
           <div className="ui max width centered raised link cards">
           <div className="card" style={{height: '15 rem'}} onClick={this.handleClick}>
@@ -51,14 +32,14 @@ class Contract extends React.Component {
 }
 
 
-function mapDispatchToProps(dispatch) {
-  return {
-    handleSubmit: (beef) => {
-      console.log(beef);
-      // dispatch({type: "CHANGE_CONTRACT", payload: beef})
-    }
-  }
-}
+// function mapDispatchToProps(dispatch) {
+//   return {
+//     handleSubmit: (beef) => {
+//       console.log(beef);
+//       // dispatch({type: "CHANGE_CONTRACT", payload: beef})
+//     }
+//   }
+// }
 
 function mapStateToProps(state){
   return {
@@ -72,4 +53,4 @@ function mapStateToProps(state){
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Contract)
+export default connect(mapStateToProps)(Contract)

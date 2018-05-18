@@ -11,8 +11,8 @@ class NewContractForm extends React.Component{
     legal: ``,
     copyright: ``,
     compensation: ``,
-    developer: 1,
-    contractor: 1,
+    developer_id: 1,
+    contractor_id: 1,
   }
 
   componentDidMount(){
@@ -31,15 +31,16 @@ class NewContractForm extends React.Component{
 
   render(){
 
-    console.log('developer: ', this.state.developer);
-    console.log('contractor: ', this.state.contractor);
+    console.log(this.state);
+    // console.log('developer: ', this.state.developer_id);
+    // console.log('contractor: ', this.state.contractor_id);
 
     const developers = this.props.users.map((user, index) => {
-      return  <option key={index} name="developer" value={user.id} user={user} id={index}>{user.first_name} {user.last_name}</option>
+      return  <option key={index} value={user.id} user={user} id={index}>{user.first_name} {user.last_name}</option>
     })
 
     const contractors = this.props.users.map((user, index) => {
-      return  <option key={index} name="contractor" value={user.id} user={user} id={index}>{user.first_name} {user.last_name}</option>
+      return  <option key={index} value={user.id} user={user} id={index}>{user.first_name} {user.last_name}</option>
     })
 
     return(
@@ -58,11 +59,11 @@ class NewContractForm extends React.Component{
             <input name="copyright" placeholder="Enter Copyright" value={this.state.copyright} onChange={this.handleChange}></input>
             <input name="compensation" placeholder="Enter Compensation" value={this.state.compensation} onChange={this.handleChange}></input>
             <b>Developer: </b>
-            <select onChange={this.handleChange} name="developer">
+            <select onChange={this.handleChange} name="developer_id">
               {developers}
             </select>
             <b>Contractor: </b>
-            <select onChange={this.handleChange} name="contractor">
+            <select onChange={this.handleChange} name="contractor_id">
               {contractors}
             </select>
             <input type='submit' value='Done'/>
