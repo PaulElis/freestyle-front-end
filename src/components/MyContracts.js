@@ -1,31 +1,21 @@
 import React from 'react'
-import {connect} from 'react-redux'
 import { Grid } from 'semantic-ui-react'
-
+import { getContracts } from '../actions/actions'
+import { connect } from 'react-redux'
 
 import Contract from './Contract'
 
-const URL = 'http://localhost:3000/api/v1/contracts'
-
 class MyContracts extends React.Component{
-  state={
-    myContracts: []
-  }
 
   componentDidMount(){
-    fetch(URL)
-      .then(response => response.json())
-      .then(contracts => this.setState({
-            myContracts: contracts
-        })
-    )
+    this.props.getContracts()
   }
 
   render(){
 
-    console.log(this.props.myContracts);
+    // console.log('line 26:', this.props);
 
-    const myContracts = this.state.myContracts.map((contract, index) => {
+    const myContracts = this.props.myContracts.map((contract, index) => {
       return <Contract contract={contract} index={index} key={index} />
     })
 
@@ -46,4 +36,9 @@ class MyContracts extends React.Component{
   }
 }
 
-export default MyContracts
+function mapStateToProps(state){
+  console.log('line 56: state', state)
+  return {myContracts: state.contracts}
+}
+
+export default connect(mapStateToProps, {getContracts})(MyContracts)

@@ -1,8 +1,8 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import { Button, Grid } from 'semantic-ui-react'
+import { Grid } from 'semantic-ui-react'
 
-import NewContractForm from './NewContractForm'
+// import NewContractForm from './NewContractForm'
 
 
 class Contract extends React.Component {
@@ -32,14 +32,14 @@ class Contract extends React.Component {
 
   render(){
 
-    console.log(this.props.contract);
+    // console.log(this.props.contract);
 
     return(
       // <NewContractForm contractChange={this.contractChange}/>
       <Grid.Column>
-          <div class="ui max width centered raised link cards">
-          <div class="card" style={{height: '15 rem'}} onClick={this.handleClick}>
-            <h4></h4> {this.props.contract.title}<br />
+          <div className="ui max width centered raised link cards">
+          <div className="card" style={{height: '15 rem'}} onClick={this.handleClick}>
+            {this.props.contract.title}<br />
             <h4>Summary</h4> {this.props.contract.summary}<br />
             <h4>Compensation</h4> {this.props.contract.compensation}<br />
             <br />

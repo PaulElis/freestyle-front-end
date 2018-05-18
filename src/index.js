@@ -5,11 +5,12 @@ import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import 'semantic-ui-css/semantic.min.css'
 
-import {createStore} from 'redux'
-import reducer from './reducers/reducer'
-import {Provider} from 'react-redux'
+import { createStore, applyMiddleware } from 'redux'
+import thunk from 'redux-thunk'
+import contractReducer from './reducers/contracts'
+import { Provider } from 'react-redux'
 
-const store = createStore(reducer)
+const store = createStore(contractReducer, applyMiddleware(thunk))
 
 // console.log(store.getState());
 

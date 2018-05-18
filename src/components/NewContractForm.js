@@ -1,8 +1,9 @@
 import React from 'react'
 import {connect} from 'react-redux'
+import {getUsers, postContract} from '../actions/actions'
 
 class NewContractForm extends React.Component{
-  state={
+  state = {
     title: ``,
     summary: ``,
     details: ``,
@@ -10,6 +11,12 @@ class NewContractForm extends React.Component{
     legal: ``,
     copyright: ``,
     compensation: ``,
+    developer: 1,
+    contractor: 1,
+  }
+
+  componentDidMount(){
+    this.props.getUsers()
   }
 
   handleChange = event => {
@@ -18,16 +25,29 @@ class NewContractForm extends React.Component{
     })
   }
 
+  handleSubmit = (newContract) => {
+    this.props.postContract(newContract)
+  }
+
   render(){
 
-    // console.log(this.props);
+    console.log('developer: ', this.state.developer);
+    console.log('contractor: ', this.state.contractor);
+
+    const developers = this.props.users.map((user, index) => {
+      return  <option key={index} name="developer" value={user.id} user={user} id={index}>{user.first_name} {user.last_name}</option>
+    })
+
+    const contractors = this.props.users.map((user, index) => {
+      return  <option key={index} name="contractor" value={user.id} user={user} id={index}>{user.first_name} {user.last_name}</option>
+    })
 
     return(
       <div>
         <div className='new-contract-form'>
           <form onSubmit = {(event) => {
             event.preventDefault()
-            this.props.handleSubmit(this.state)
+            this.handleSubmit(this.state)
             }
           }>
             <input name="title" placeholder="Enter Title" value={this.state.title} onChange={this.handleChange}></input>
@@ -37,6 +57,14 @@ class NewContractForm extends React.Component{
             <input name="legal" placeholder="Enter Legal" value={this.state.legal} onChange={this.handleChange}></input>
             <input name="copyright" placeholder="Enter Copyright" value={this.state.copyright} onChange={this.handleChange}></input>
             <input name="compensation" placeholder="Enter Compensation" value={this.state.compensation} onChange={this.handleChange}></input>
+            <b>Developer: </b>
+            <select onChange={this.handleChange} name="developer">
+              {developers}
+            </select>
+            <b>Contractor: </b>
+            <select onChange={this.handleChange} name="contractor">
+              {contractors}
+            </select>
             <input type='submit' value='Done'/>
           </form>
         </div>
@@ -64,36 +92,9 @@ class NewContractForm extends React.Component{
   }
 }
 
-function mapDispatchToProps(dispatch) {
-  return {
-    handleSubmit: (newContract) => {
-      console.log(newContract);
-      // dispatch({type: "NEW_CONTRACT", payload: newContract})
-    }
-  }
-}
-
-// function postFetch(beef) {
-//   fetch(URL, {
-//     headers: {
-//       'Accept': 'application/json',
-//       'Content-Type': 'application/json'
-//     },
-//     method: "POST",
-//     body: JSON.stringify({state: beef})
-//   })
-// }
-
 function mapStateToProps(state){
-  return{
-    title: state.title,
-    summary: state.summary,
-    details: state.details,
-    milestones: state.milestones,
-    legal: state.legal,
-    copyright: state.copyright,
-    compensation: state.compensation,
-  }
+  // console.log('line 74: state', state)
+  return {users: state.users}
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(NewContractForm)
+export default connect(mapStateToProps, {getUsers, postContract})(NewContractForm)
