@@ -29,7 +29,7 @@ class MyContracts extends React.Component{
       return <Contract contract={contract} index={index} key={index} setCurrentContract={this.setCurrentContract}/>
     })
 
-    console.log('line 32:', this.props.myContracts);
+    // console.log('line 32:', this.props.myContracts);
 
     return(
 

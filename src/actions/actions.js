@@ -1,6 +1,72 @@
 const URL = 'http://localhost:3000/api/v1'
 const headers = { "Content-Type": "application/json"}
 
+export function login(username, password){
+	return (dispatch) => {
+		return fetch(URL + "/login", {
+			method: "POST",
+			headers: headers,
+			body: JSON.stringify({username, password})
+		})
+		.then(res => res.json())
+		.then(userData => {
+			console.log("LOGGING IN", userData)
+			localStorage.setItem("token", userData.jwt)
+			dispatch({
+				type: "LOGIN_USER",
+				payload: userData
+			})
+		})
+	}
+}
+
+export function logout(){
+	localStorage.removeItem("token")
+  console.log('removed token:', localStorage.jwt);
+	return {
+		type: "LOGOUT"
+	}
+}
+
+export function getUser(){
+
+  const token = localStorage.getItem("token")
+  return (dispatch) => {
+    return fetch(URL + "/get_user", {
+      headers: {
+        "Authorization": token
+      }
+    })
+    .then(res => res.json())
+    .then(userData => {
+      dispatch({
+        type: "LOGIN_USER",
+        payload: userData
+      })
+    })
+  }
+}
+
+export function signup(username, password){
+	return (dispatch) => {
+		return fetch(URL + "/signup", {
+			method: "POST",
+			headers: headers,
+			body: JSON.stringify({username, password})
+		})
+		.then(res => res.json())
+		.then(userData => {
+			console.log("LOGGING IN", userData)
+			localStorage.setItem("token", userData.jwt)
+			dispatch({
+				type: "LOGIN_USER",
+				payload: userData
+			})
+		})
+	}
+}
+
+
 export function getContracts(){
   return (dispatch) => {
     return fetch(URL + "/contracts")
