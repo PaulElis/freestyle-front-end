@@ -1,7 +1,11 @@
 import React from 'react'
+import '../styles/welcome.css'
 import { Form, Button } from 'semantic-ui-react'
 import { connect } from 'react-redux'
 import { signup } from '../actions/actions'
+import { NavLink } from 'react-router-dom'
+
+
 
 class SignupForm extends React.Component{
 
@@ -34,23 +38,29 @@ class SignupForm extends React.Component{
 		console.log(this.props)
 		return (
 			<div>
-				<Form>
-			    <Form.Group widths='equal'>
-						<Form.Input name="first_name" value={this.state.first_name} placeholder='First Name' onChange={this.handleChange}/>
-						<Form.Input name="last_name" value={this.state.last_name} placeholder='Last Name' onChange={this.handleChange}/>
-						<Form.Input name="username" value={this.state.username} placeholder='Username' onChange={this.handleChange}/>
-						<Form.Input type="password" name="password" value={this.state.password} placeholder='Password' onChange={this.handleChange}/>
-						<Form.Input type="password" name="passwordConfirmation" value={this.state.passwordConfirmation} placeholder='Confirm Password' onChange={this.handleChange}/>
-						{/* <Button onClick={this.handleLogin}>Login</Button> */}
-						<Button onClick={this.handleSubmit}>Signup</Button>
-			    </Form.Group>
-					<div className='alert'>
-						{this.state.alert}
+				<div className='welcome-container'>
+					<div className='freelance-logo'>
+						<h1>Freelancr</h1>
 					</div>
-					<Form.Checkbox label='I agree to the Terms and Conditions' />
-				</Form>
-				<div>
-					Already have an account? Log In
+					<Form>
+				    <Form.Group widths='equal'>
+							<Form.Input name="first_name" value={this.state.first_name} placeholder='First Name' onChange={this.handleChange}/>
+							<Form.Input name="last_name" value={this.state.last_name} placeholder='Last Name' onChange={this.handleChange}/>
+							<Form.Input name="username" value={this.state.username} placeholder='Username' onChange={this.handleChange}/>
+							<Form.Input type="password" name="password" value={this.state.password} placeholder='Password' onChange={this.handleChange}/>
+							<Form.Input type="password" name="passwordConfirmation" value={this.state.passwordConfirmation} placeholder='Confirm Password' onChange={this.handleChange}/>
+							<Button onClick={this.handleSubmit}>Signup</Button>
+				    </Form.Group>
+						<div className='alert'>
+							{this.state.alert}
+						</div>
+						<div className='checkbox'>
+							<Form.Checkbox label='I agree to the Terms and Conditions' />
+						</div>
+					</Form>
+					<div>
+						Already have an account? <NavLink to="/login">Log in</NavLink>
+					</div>
 				</div>
 			</div>
 		)

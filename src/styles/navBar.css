@@ -1,8 +1,14 @@
 div.navBar-container {
-  background-color: #ffce00;
-  color: #ffffff;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background-color: #3DD387;
+  color: white;
 }
 
-a {
-  color: #ffffff;
+.item {
+  color: white;
+}
+
+.menu {
+  color: white;
 }

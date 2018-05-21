@@ -1,3 +1,9 @@
+div.myContracts-container {
+  background-color: #f7f7f7;
+}
+
 div.three.column.row {
+  padding-top: 175px;
+  padding-bottom: 175px;
   background-color: #f7f7f7;
 }

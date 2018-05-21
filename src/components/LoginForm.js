@@ -2,6 +2,7 @@ import React from 'react'
 import { Button, Form } from 'semantic-ui-react'
 import { connect } from 'react-redux'
 import { login } from '../actions/actions'
+import { NavLink } from 'react-router-dom'
 
 class LoginForm extends React.Component{
 
@@ -31,36 +32,35 @@ class LoginForm extends React.Component{
 
 
 	render(){
-		console.log('line 34', this.state)
+		// console.log('line 34', this.state)
 		return (
 			<div>
-        <Form>
-			    <Form.Group widths='equal'>
-			      <Form.Input name="username" value={this.state.username} placeholder='Username' onChange={this.handleChange} />
-			      <Form.Input type="password" name="password" value={this.state.password} placeholder='Password' onChange={this.handleChange} />
-						<Button onClick={this.handleLogin}>Login</Button>
-						<Button onClick={this.handleClick}>Signup</Button>
-			    </Form.Group>
-					<div className='alert'>
-						{this.state.alert}
+				<div className='welcome-container'>
+					<div className='freelance-logo'>
+						<h1>Freelancr</h1>
 					</div>
-					<Form.Checkbox label='I agree to the Terms and Conditions' />
-				</Form>
+	        <Form>
+				    <Form.Group widths='equal'>
+				      <Form.Input name="username" value={this.state.username} placeholder='Username' onChange={this.handleChange} />
+				      <Form.Input type="password" name="password" value={this.state.password} placeholder='Password' onChange={this.handleChange} />
+							<Button onClick={this.handleLogin}>Login</Button>
+							{/* <Button onClick={this.handleClick}>Signup</Button> */}
+				    </Form.Group>
+						<div className='alert'>
+							{this.state.alert}
+						</div>
+						<div className='checkbox'>
+							<Form.Checkbox label='I agree to the Terms and Conditions' />
+						</div>
+						</Form>
+					<div>
+						Don't an account? <NavLink to="/signup">Sign up</NavLink>
+					</div>
+				</div>
 			</div>
 		)
 	}
 
 }
-//
-// function mapStateToProps(state){
-//   // console.log('line 109: state', state)
-//   return {
-// 		username: state.username,
-// 		password: state.password,
-// 		alert: state.alert,
-// 		signup: state.signup,
-// 		}
-// }
-
 
 export default connect(null, {login})(LoginForm)

@@ -33,17 +33,16 @@ class MyContracts extends React.Component{
     // console.log('line 32:', this.props.myContracts);
 
     return(
-
-
+    <div className='myContracts-container'>
       <div className='myContracts'>
-          {this.state.currentContract === '' ? <Grid divided='vertically'><Grid.Row columns={3}> {myContracts} </Grid.Row></Grid> : <Router>
-            <Route path='/:id' render={(routerProps) => {
-              console.log();
-              return <NewContractForm {...routerProps} contract={this.state.currentContract} index={this.state.currentContract.id} key={this.state.currentContract.id}/>
-            }} />
-          {/* <NewContractForm contract={this.state.currentContract} index={this.state.currentContract.id} key={this.state.currentContract.id} /> */}
+        {this.state.currentContract === '' ? <Grid divided='vertically'><Grid.Row columns={3}> {myContracts} </Grid.Row></Grid> : <Router>
+          <Route path='/:id' render={(routerProps) => {
+            console.log();
+            return <NewContractForm {...routerProps} contract={this.state.currentContract} index={this.state.currentContract.id} key={this.state.currentContract.id}/>
+          }} />
         </Router>}
       </div>
+    </div>
     )
   }
 }
