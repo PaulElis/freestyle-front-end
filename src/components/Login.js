@@ -1,14 +1,18 @@
 import React from 'react'
 import '../styles/login.css'
-import { Button, Form } from 'semantic-ui-react'
+// import { Button, Form } from 'semantic-ui-react'
 import { connect } from 'react-redux'
 import { login } from '../actions/actions'
+import SignupForm from './SignupForm'
+import LoginForm from './LoginForm'
 
 class Login extends React.Component{
 
 	state = {
 		username: "",
-		password: ""
+		password: "",
+		alert: null,
+		signup: false,
 	}
 
 	handleChange = (event) => {
@@ -17,39 +21,70 @@ class Login extends React.Component{
 		})
 	}
 
-	handleSubmit = (event) => {
-		this.props.login(this.state.username, this.state.password)
-		.then(()=> this.props.history.push("/home"))
+	handleSignup = (event) => {
+		console.log(this.state.signup);
+		this.setState({
+			signup: !this.state.signup
+		})
 	}
 
 	render(){
-		console.log(this.state);
+		// console.log('line 37', this.props);
 		return (
 			<div className='login-container'>
 				<br />
 				<br />
 				<br />
 				<br />
-				<Form>
-			    <Form.Group widths='equal'>
-			      <Form.Input name="username" value={this.state.username} placeholder='Username' onChange={this.handleChange} />
-			      <Form.Input type="password" name="password" value={this.state.password} placeholder='Password' onChange={this.handleChange} />
-						<Button onClick={this.handleSubmit}>Login</Button>
-			    </Form.Group>
-					<Form.Checkbox label='I agree to the Terms and Conditions' />
-				</Form>
 				<br />
 				<br />
 				<br />
 				<br />
-
-				{/* <Input name="username" value={this.state.username} onChange={this.handleChange}/>
-				<Input type="password" name="password" value={this.state.password} onChange={this.handleChange}/>
-				<Button onClick={this.handleSubmit}>Login!</Button> */}
+				<br />
+				<br />
+				<br />
+					<h1>Freelancr</h1>
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+						<div className='Welcome-Container'>
+							{ this.state.signup ? <SignupForm history={this.props.history} username={this.state.username} password={this.state.password} signup={this.state.signup} alert={this.state.alert} handleChange={this.handleChange} handleLogin={this.handleLogin} handleSignup={this.handleSignup}/> : <LoginForm history={this.props.history} username={this.state.username} password={this.state.password} signup={this.state.signup} alert={this.state.alert} handleChange={this.handleChange} handleLogin={this.handleLogin} handleSignup={this.handleSignup} /> }
+						</div>
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
 			</div>
 		)
 	}
-
 }
 
 

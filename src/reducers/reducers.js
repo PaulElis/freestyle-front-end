@@ -2,6 +2,10 @@ const defaultState = {
   contracts: [],
   users: [],
   currentUser: null,
+  username: "",
+  password: "",
+  alert: null,
+  signup: false,
 }
 
 export default function(state=defaultState, action){
@@ -12,6 +16,10 @@ export default function(state=defaultState, action){
       return {...state, users: action.payload}
     case "LOGIN_USER":
       return {...state, currentUser: action.payload.user}
+    case "SET_USERNAME":
+      return {...state, username: action.payload.username}
+    case "SET_PASSWORD":
+      return {...state, password: action.payload.password}
     case "LOGOUT":
       return defaultState
     default:

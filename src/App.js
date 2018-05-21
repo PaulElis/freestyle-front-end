@@ -7,7 +7,7 @@ import { connect } from 'react-redux'
 
 import NavBar from './containers/NavBar'
 import Home from './components/Home'
-import Signup from './components/Signup'
+import SignupForm from './components/SignupForm'
 import NewContractForm from './components/NewContractForm'
 import MyContracts from './components/MyContracts'
 import MyProfile from './components/MyProfile'
@@ -19,6 +19,7 @@ import {Route, withRouter} from 'react-router-dom'
 class App extends Component {
 
   componentDidMount(){
+    // console.log('in line 22', localStorage.getItem("token"));
 		if (localStorage.getItem("token")){
 			this.props.getUser()
 			.then(() => {
@@ -32,13 +33,9 @@ class App extends Component {
       <div className="App">
         {/* <Router> */}
           <div className="app">
-            <NavBar />
-              {/* <Button onClick={() => {
-                  this.props.logout()
-                  this.props.history.push('/login')
-                }}>Logout</Button> */}
+            {localStorage.getItem("token") ? <NavBar /> : null}
                 <Route exact path="/login" component={Login} />
-                <Route exact path="/signup" component={Signup}/>
+                <Route exact path="/signup" component={SignupForm}/>
                 <Route exact path="/home" component={Home}/>
                 <Route exact path="/contracts" component={MyContracts}/>
                 <Route exact path="/contracts/new" component={NewContractForm}/>
