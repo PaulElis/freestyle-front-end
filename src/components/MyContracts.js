@@ -1,7 +1,9 @@
 import React from 'react'
+import '../styles/myContracts.css'
 import { Grid } from 'semantic-ui-react'
 import { getContracts } from '../actions/actions'
 import { connect } from 'react-redux'
+import {BrowserRouter as Router, Route} from 'react-router-dom';
 
 import Contract from './Contract'
 import NewContractForm from './NewContractForm'
@@ -24,7 +26,6 @@ class MyContracts extends React.Component{
 
   render(){
 
-
     const myContracts = this.props.myContracts.map((contract, index) => {
       return <Contract contract={contract} index={index} key={index} setCurrentContract={this.setCurrentContract}/>
     })
@@ -35,7 +36,13 @@ class MyContracts extends React.Component{
 
 
       <div className='myContracts'>
-          {this.state.currentContract === '' ? <Grid divided='vertically'><Grid.Row columns={3}> {myContracts} </Grid.Row></Grid> : <NewContractForm contract={this.state.currentContract} index={this.state.currentContract.id} key={this.state.currentContract.id} />}
+          {this.state.currentContract === '' ? <Grid divided='vertically'><Grid.Row columns={3}> {myContracts} </Grid.Row></Grid> : <Router>
+            <Route path='/:id' render={(routerProps) => {
+              console.log();
+              return <NewContractForm {...routerProps} contract={this.state.currentContract} index={this.state.currentContract.id} key={this.state.currentContract.id}/>
+            }} />
+          {/* <NewContractForm contract={this.state.currentContract} index={this.state.currentContract.id} key={this.state.currentContract.id} /> */}
+        </Router>}
       </div>
     )
   }

@@ -21,8 +21,8 @@ export function login(username, password){
 }
 
 export function logout(){
-	localStorage.removeItem("token")
   console.log('removed token:', localStorage.jwt);
+	localStorage.removeItem("token")
 	return {
 		type: "LOGOUT"
 	}

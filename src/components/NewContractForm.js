@@ -1,4 +1,7 @@
 import React from 'react'
+import '../styles/newContractForm.css'
+import { Button, Form, Dropdown } from 'semantic-ui-react'
+// import { developersDropdown } from '../dropdown/dropdown.js'
 import {connect} from 'react-redux'
 import {getUsers, postContract, changeContract} from '../actions/actions'
 
@@ -42,6 +45,8 @@ class NewContractForm extends React.Component{
     // console.log('contractor: ', this.state.contractor_id);
 
     const developers = this.props.users.map((user, index) => {
+      // const obj = {value: ''}
+      // obj.push(value: user.id, user: user, id: index)
       return  <option key={index} value={user.id} user={user} id={index}>{user.first_name} {user.last_name}</option>
     })
 
@@ -50,8 +55,22 @@ class NewContractForm extends React.Component{
     })
 
     return(
-      <div>
+      <div className='new-contract-form-container'>
         <div className='new-contract-form'>
+          <Form.Group widths='equal'>
+            <Form.Input name="title" placeholder="Enter Title" value={this.state.title} onChange={this.handleChange} />
+            <Form.Input name="summary" placeholder="Enter Summary" value={this.state.summary} onChange={this.handleChange} />
+            <Form.Input name="details" placeholder="Enter Details" value={this.state.details} onChange={this.handleChange} />
+            <Form.Input name="milestones" placeholder="Enter Milestones" value={this.state.milestones} onChange={this.handleChange} />
+            <Form.Input name="legal" placeholder="Enter Legal" value={this.state.legal} onChange={this.handleChange} />
+            <Form.Input name="copyright" placeholder="Enter Copyright" value={this.state.copyright} onChange={this.handleChange} />
+            <Form.Input name="compensation" placeholder="Enter Compensation" value={this.state.compensation} onChange={this.handleChange} />
+            <Dropdown placeholder='Developer' fluid selection options={developers} />
+            <Dropdown placeholder='Contractor' fluid selection options={contractors} />
+            {/* <Dropdown placeholder='Developer' fluid selection options={developers} /> */}
+						<Button onClick={this.handleSubmit}>Done</Button>
+			    </Form.Group>
+
           <form onSubmit = {(event) => {
             event.preventDefault()
             this.handleSubmit(this.state)

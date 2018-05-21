@@ -1,4 +1,9 @@
 img.home-image {
-  /* height: 35rem; */
   width: 100%;
+}
+
+div.home-container {
+  background-color: #ffce00;
+  color: #ffffff;
+  text-shadow: black 0.1em 0.1em 0.2em
 }

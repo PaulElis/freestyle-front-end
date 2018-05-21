@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Button} from 'semantic-ui-react'
+// import {Button} from 'semantic-ui-react'
 
 // import {BrowserRouter as Router, Route} from 'react-router-dom';
 import './App.css';
@@ -33,16 +33,16 @@ class App extends Component {
         {/* <Router> */}
           <div className="app">
             <NavBar />
-              <Button onClick={() => {
+              {/* <Button onClick={() => {
                   this.props.logout()
                   this.props.history.push('/login')
-                }}>Logout</Button>
-                <Route path="/login" component={Login} />
-                <Route path="/signup" component={Signup}/>
-                <Route path="/home" component={Home}/>
-                <Route path="/MyContracts" component={MyContracts}/>
-                <Route path="/NewContractForm" component={NewContractForm}/>
-                <Route path="/MyProfile" component={MyProfile}/>
+                }}>Logout</Button> */}
+                <Route exact path="/login" component={Login} />
+                <Route exact path="/signup" component={Signup}/>
+                <Route exact path="/home" component={Home}/>
+                <Route exact path="/contracts" component={MyContracts}/>
+                <Route exact path="/contracts/new" component={NewContractForm}/>
+                <Route exact path="/profile" component={MyProfile}/>
             {/* <Route path="/login" component={Login} />
               <Route exact path="/Home" render={(routerProps) => {
                 console.log();

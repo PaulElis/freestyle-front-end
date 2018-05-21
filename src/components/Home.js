@@ -1,5 +1,5 @@
 import React from 'react'
-import '../styles/Home.css'
+import '../styles/home.css'
 
 class Home extends React.Component{
   state={}
@@ -8,7 +8,7 @@ class Home extends React.Component{
 
 
     return(
-      <div>
+      <div className="home-container">
         <div>
           <img className="home-image" src='https://thelatestfreelanceblog.joomla.com/images/7.jpg' alt='oh no!'/>
         </div>
