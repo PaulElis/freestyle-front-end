@@ -27,12 +27,10 @@ class NavBar extends React.Component {
       {/* <Menu size='large'> */}
       <Menu secondary>
           <Menu.Item className="navBar-item" name='Home' active={activeItem === 'messages'} onClick={() => {
-            this.props.history.push('/home')
-          }} >
+            this.props.history.push('/home')}} >
             <Icon name='home' size='large' />
           </Menu.Item>
-
-        <Menu.Menu position='center'>
+        <Menu.Menu position='left'>
            <p id="navbar-freelance-logo-title">Freelancr</p>
         </Menu.Menu>
         <Menu.Menu position='right'>

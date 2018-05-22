@@ -5,3 +5,7 @@ div.myProfile-container {
   color: #ffffff;
   text-shadow: black 0.1em 0.1em 0.2em
 }
+
+body {
+  background-color: #FFB697;
+}

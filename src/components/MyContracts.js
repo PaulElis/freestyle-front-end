@@ -1,7 +1,7 @@
 import React from 'react'
 import '../styles/myContracts.css'
 import { Grid } from 'semantic-ui-react'
-import { getContracts } from '../actions/actions'
+import { getContracts, getUser } from '../actions/actions'
 import { connect } from 'react-redux'
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 
@@ -12,10 +12,12 @@ class MyContracts extends React.Component{
 
   state = {
     currentContract: '',
+    // currentUser: '',
   }
 
   componentDidMount(){
     this.props.getContracts()
+    this.props.getUser()
   }
 
   setCurrentContract = (contract) => {
@@ -30,7 +32,12 @@ class MyContracts extends React.Component{
       return <Contract contract={contract} index={index} key={index} setCurrentContract={this.setCurrentContract}/>
     })
 
-    // console.log('line 32:', this.props.myContracts);
+    // const developerContracts = this.props.myContracts.map((contract, index) => {
+    //   return <Contract contract={contract} index={index} key={index} setCurrentContract={this.setCurrentContract}/>
+    // })
+
+    // console.log('line 39:', this.props.myContracts);
+    console.log('line 40:', this.props.currentUser);
 
     return(
     <div className='myContracts-container'>
@@ -49,7 +56,10 @@ class MyContracts extends React.Component{
 
 function mapStateToProps(state){
   // console.log('line 56: state', state)
-  return {myContracts: state.contracts}
+  return {
+    myContracts: state.contracts,
+    currentUser: state.currentUser,
+  }
 }
 
-export default connect(mapStateToProps, {getContracts})(MyContracts)
+export default connect(mapStateToProps, {getContracts, getUser})(MyContracts)

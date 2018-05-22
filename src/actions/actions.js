@@ -31,7 +31,6 @@ export function logout(){
 }
 
 export function getUser(){
-
   const token = localStorage.getItem("token")
   return (dispatch) => {
     return fetch(URL + "/get_user", {
