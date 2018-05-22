@@ -1,13 +1,31 @@
+#freelance-logo-title {
+  font-family: 'Pacifico', cursive;
+  letter-spacing: 5px;
+  font-size: 55px;
+  text-shadow: 8px 8px 15px red;
+}
+
 div.welcome-container {
-  padding-top: 200px;
+  padding-top: 5%;
   padding-bottom: 400px;
-  background-color: #f7f7f7;
+  background-color: #FFB697;
+}
+
+Form.form {
+  margin: auto;
+  width: 30%;
+  border: 1px solid white;
+  padding: 25px;
+  background-color: #3DD387;
+  box-shadow: 10px 10px 15px grey;
 }
 
 div.freelance-logo {
   padding-top: 100px;
   padding-bottom: 100px;
-  background-color: #f7f7f7;
+  background-color: #FFB697;
+  color: white;
+  font-style: italic;
 }
 
 div.alert {

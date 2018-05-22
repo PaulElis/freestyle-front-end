@@ -40,27 +40,29 @@ class SignupForm extends React.Component{
 			<div>
 				<div className='welcome-container'>
 					<div className='freelance-logo'>
-						<h1>Freelancr</h1>
+						<h1 id="freelance-logo-title">Freelancr</h1>
 					</div>
 					<Form>
 				    <Form.Group widths='equal'>
 							<Form.Input name="first_name" value={this.state.first_name} placeholder='First Name' onChange={this.handleChange}/>
-							<Form.Input name="last_name" value={this.state.last_name} placeholder='Last Name' onChange={this.handleChange}/>
+							<Form.Input name="last_name" value={this.state.last_name} placeholder='Last Name' onChange={this.handleChange}/><br />
+						</Form.Group>
 							<Form.Input name="username" value={this.state.username} placeholder='Username' onChange={this.handleChange}/>
+						<Form.Group  widths='equal'>
 							<Form.Input type="password" name="password" value={this.state.password} placeholder='Password' onChange={this.handleChange}/>
 							<Form.Input type="password" name="passwordConfirmation" value={this.state.passwordConfirmation} placeholder='Confirm Password' onChange={this.handleChange}/>
+						</Form.Group>
 							<Button onClick={this.handleSubmit}>Signup</Button>
-				    </Form.Group>
 						<div className='alert'>
 							{this.state.alert}
 						</div>
 						<div className='checkbox'>
 							<Form.Checkbox label='I agree to the Terms and Conditions' />
 						</div>
+						<div>
+							Already have an account? <NavLink to="/login">Log in</NavLink>
+						</div>
 					</Form>
-					<div>
-						Already have an account? <NavLink to="/login">Log in</NavLink>
-					</div>
 				</div>
 			</div>
 		)

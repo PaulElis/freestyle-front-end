@@ -1,4 +1,5 @@
 import React from 'react'
+import '../styles/welcome.css'
 import { Button, Form } from 'semantic-ui-react'
 import { connect } from 'react-redux'
 import { login } from '../actions/actions'
@@ -33,29 +34,29 @@ class LoginForm extends React.Component{
 
 	render(){
 		// console.log('line 34', this.state)
+
 		return (
 			<div>
 				<div className='welcome-container'>
 					<div className='freelance-logo'>
-						<h1>Freelancr</h1>
+						<h1 id="freelance-logo-title">Freelancr</h1>
 					</div>
 	        <Form>
 				    <Form.Group widths='equal'>
 				      <Form.Input name="username" value={this.state.username} placeholder='Username' onChange={this.handleChange} />
 				      <Form.Input type="password" name="password" value={this.state.password} placeholder='Password' onChange={this.handleChange} />
+						</Form.Group>
 							<Button onClick={this.handleLogin}>Login</Button>
-							{/* <Button onClick={this.handleClick}>Signup</Button> */}
-				    </Form.Group>
 						<div className='alert'>
 							{this.state.alert}
 						</div>
 						<div className='checkbox'>
 							<Form.Checkbox label='I agree to the Terms and Conditions' />
 						</div>
-						</Form>
-					<div>
-						Don't an account? <NavLink to="/signup">Sign up</NavLink>
-					</div>
+						<div>
+							Don't an account? <NavLink to="/signup">Sign up</NavLink>
+						</div>
+					</Form>
 				</div>
 			</div>
 		)

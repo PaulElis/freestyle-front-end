@@ -1,13 +1,6 @@
 const URL = 'http://localhost:3000/api/v1'
 const headers = { "Content-Type": "application/json"}
 
-// function authedHeaders(){
-// 	return {
-// 		...headers,
-// 		"Authorization": localStorage.getItem("token")
-// 	}
-// }
-
 export function login(username, password){
 	return (dispatch) => {
 		return fetch(URL + "/login", {
