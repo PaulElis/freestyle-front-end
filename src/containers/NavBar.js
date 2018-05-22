@@ -26,9 +26,9 @@ class NavBar extends React.Component {
     <div className="navBar-container">
       {/* <Menu size='large'> */}
       <Menu secondary>
-          <Menu.Item className="navBar-item" name='Home' active={activeItem === 'messages'} onClick={() => {
+          <Menu.Item id="navBar-item" name='Home' active={activeItem === 'messages'} onClick={() => {
             this.props.history.push('/home')}} >
-            <Icon name='home' size='large' />
+            <Icon name='home' size='big' />
           </Menu.Item>
         <Menu.Menu position='left'>
            <p id="navbar-freelance-logo-title">Freelancr</p>
@@ -37,22 +37,22 @@ class NavBar extends React.Component {
           {/* <Menu.Item>
             <Input icon='search' placeholder='Search...' />
           </Menu.Item> */}
-          <Menu.Item className="navBar-item" name='My Contracts' active={activeItem === 'messages'} onClick={() => {
+          <Menu.Item id="navBar-item" name='My Contracts' active={activeItem === 'messages'} onClick={() => {
             this.props.history.push('/contracts')}} >
-            <Icon name='folder' size='large' />
+            <Icon name='folder' size='big' />
           </Menu.Item>
-          <Menu.Item className="navBar-item" name='Create a Contract' active={activeItem === 'messages'} onClick={() => {
+          <Menu.Item id="navBar-item" name='Create a Contract' active={activeItem === 'messages'} onClick={() => {
             this.props.history.push('/contracts/new')}} >
-            <Icon name='compose' size='large' />
+            <Icon name='compose' size='big' />
           </Menu.Item>
-          <Menu.Item className="navBar-item" name='Profile' active={activeItem === 'messages'} onClick={() => {
+          <Menu.Item id="navBar-item" name='Profile' active={activeItem === 'messages'} onClick={() => {
             this.props.history.push('/profile')}} >
-            <Icon name='user' size='large' />
+            <Icon name='user' size='big' />
           </Menu.Item>
-          <Menu.Item className="navBar-item" name='Logout' active={activeItem === 'messages'} onClick={() => {
+          <Menu.Item id="navBar-item" name='Logout' active={activeItem === 'messages'} onClick={() => {
             this.props.logout()
             this.props.history.push('/login')}} >
-              <Icon name='external square' size='large' />
+              <Icon name='external square' size='big' />
           </Menu.Item>
         </Menu.Menu>
       </Menu>

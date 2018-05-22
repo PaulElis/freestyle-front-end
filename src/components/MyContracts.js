@@ -17,6 +17,7 @@ class MyContracts extends React.Component{
   componentDidMount(){
     this.props.getContracts()
     this.props.getUser()
+    // console.log('line 20:', this.props.currentUser);
   }
 
   setCurrentContract = (contract) => {
@@ -31,11 +32,11 @@ class MyContracts extends React.Component{
     //   return <Contract contract={contract} index={index} key={index} setCurrentContract={this.setCurrentContract}/>
     // })
 
-    const developerContracts = this.props.currentUser ? this.props.currentUser.developer_contracts.map((contract, index) => {
+    const developerContracts = this.props.currentUser.developer_contracts ? this.props.currentUser.developer_contracts.map((contract, index) => {
       return <Contract contract={contract} index={index} key={index} setCurrentContract={this.setCurrentContract}/>
     }) : null
 
-    const contractorContracts = this.props.currentUser ? this.props.currentUser.contractor_contracts.map((contract, index) => {
+    const contractorContracts = this.props.currentUser.contractor_contracts ? this.props.currentUser.contractor_contracts.map((contract, index) => {
       return <Contract contract={contract} index={index} key={index} setCurrentContract={this.setCurrentContract}/>
     }) : null
 
@@ -47,12 +48,12 @@ class MyContracts extends React.Component{
       <div className='myContracts'>
         {this.state.currentContract === '' && this.props.currentUser ?
         <div>
-          <Grid divided='vertically'>
-            <h1>Developer Contracts</h1>
+          <Grid divided='vertically' id='myContracts-grid'>
+            <h1 id='contracts-title'>Developer Contracts</h1>
             <Grid.Row columns={3}> {developerContracts} </Grid.Row>
           </Grid>
           <Grid divided='vertically'>
-            <h1>Contractor Contracts</h1>
+            <h1 id='contracts-title'>Contractor Contracts</h1>
             <Grid.Row columns={3}> {contractorContracts} </Grid.Row>
           </Grid>
         </div>

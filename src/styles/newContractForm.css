@@ -1,3 +1,8 @@
 div.new-contract-form-container {
   background-color: #f7f7f7;
+  padding-top: 25px;
+}
+
+body {
+    background-color: powderblue;
 }

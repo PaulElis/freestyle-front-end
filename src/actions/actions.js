@@ -40,7 +40,7 @@ export function getUser(){
     })
     .then(res => res.json())
     .then(userData => {
-			console.log(userData);
+			// console.log(userData);
       dispatch({
         type: "LOGIN_USER",
         payload: userData

@@ -2,8 +2,22 @@ div.myContracts-container {
   background-color: #f7f7f7;
 }
 
+#myContracts-grid {
+  margin-top: 5px;
+}
+
+
+
+#contracts-title {
+  color: black;
+  letter-spacing: 2px;
+  font-family: 'PT Sans Narrow', sans-serif;
+  margin-left: 20px;
+  padding-top: 10px;
+}
+
 div.three.column.row {
-  padding-top: 35px;
-  padding-bottom: 35px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   background-color: #f7f7f7;
 }
