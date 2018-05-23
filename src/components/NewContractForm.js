@@ -15,8 +15,12 @@ class NewContractForm extends React.Component{
     legal: this.props.contract ? this.props.contract.legal : '',
     copyright: this.props.contract ? this.props.contract.copyright : '',
     compensation: this.props.contract ? this.props.contract.compensation : '',
-    developer_id: 1,
-    contractor_id: 1,
+    developer_id: this.props.contract ? this.props.contract.developer_id : '',
+    contractor_id: this.props.contract ? this.props.contract.contractor_id : '',
+    success: false,
+    dev_match: false,
+    title_check: '',
+    summary_check: '',
   }
 
   componentDidMount(){
@@ -38,22 +42,38 @@ class NewContractForm extends React.Component{
   handleSubmit = (contract) => {
     // console.log('contract', result);
     if(!this.props.contract){
-      this.props.postContract(contract)
+      if(this.state.developer_id === this.state.contractor_id){
+        this.setState({
+          dev_match: true,
+        })
+      } else if (this.state.title === '') {
+        console.log('line 49');
+        this.setState({
+          title_check: true
+        })
+      } else if (this.state.summary === '') {
+        this.setState({
+          summary_check: true
+        })
+      } else if (this.state.developer_id !== '' && this.state.developer_id !== '') {
+        this.props.postContract(contract)
+        this.setState({
+          success: true,
+          dev_match: false,
+          title_check: true,
+        })
+      }
     } else {
-      console.log('in changeContract conditional', contract);
       this.props.changeContract(contract, contract.id)
+      this.setState({
+        success: true
+      })
     }
   }
 
   render(){
 
-    console.log(this.props);
-    // console.log('developer: ', this.state.developer_id);
-    // console.log('contractor: ', this.state.contractor_id);
-
-    // const developers = this.props.users.map((user, index) => {
-    //   return  <option name="developer_id" key={index} value={user.id} user={user} id={index}>{user.first_name} {user.last_name}</option>
-    // })
+    // console.log(this.props);
 
     const developersSemantic = this.props.users.map((user, index) => {
       return {key: index, value: user.id, text: `${user.first_name} ${user.last_name}`, user: user, id: user.id}
@@ -69,67 +89,74 @@ class NewContractForm extends React.Component{
         <div className='new-contract-form'>
             <Form widths='equal' onSubmit = {(event) => {
               event.preventDefault()
-              console.log('line 73', this.state);
+              // console.log('line 73', this.state);
               this.handleSubmit(this.state)
               }
             }>
-              <Form.Input name="title" placeholder="Enter Title" value={this.state.title} onChange={this.handleChange} />
-              <Form.Input name="summary" placeholder="Enter Summary" value={this.state.summary} onChange={this.handleChange} />
-              <Form.Input name="details" placeholder="Enter Details" value={this.state.details} onChange={this.handleChange} />
-              <Form.Input name="milestones" placeholder="Enter Milestones" value={this.state.milestones} onChange={this.handleChange} />
-              <Form.Input name="legal" placeholder="Enter Legal" value={this.state.legal} onChange={this.handleChange} />
-              <Form.Input name="copyright" placeholder="Enter Copyright" value={this.state.copyright} onChange={this.handleChange} />
-              <Form.Input name="compensation" placeholder="Enter Compensation" value={this.state.compensation} onChange={this.handleChange} />
-                <Dropdown placeholder='Developer' name='developer_id' value={this.props.contract ? this.props.contract.developer_id : null} fluid selection options={developersSemantic} onChange={this.handleDropdown} />
-                <Dropdown placeholder='Contractor' name='contractor_id' value={this.props.contract ? this.props.contract.contractor_id : null} fluid selection options={contractorsSemantic} onChange={this.handleDropdown} />
-                <Button type="submit">Create</Button>
+              <p id='new-contract-label'>Title</p>
+                <Form.Input name="title" placeholder="Title" value={this.state.title} onChange={this.handleChange} />
+                <div id='form-alert'>
+                  {this.state.title_check ? 'Title must exist.'
+                  : null}
+                </div>
+              <p id='new-contract-label'>Summary</p>
+                <Form.Input name="summary" placeholder="Summary" value={this.state.summary} onChange={this.handleChange} />
+                <div id='form-alert'>
+                  {this.state.summary_check ? 'Summary must exist.'
+                  : null}
+                </div>
+              <p id='new-contract-label'>Details</p>
+                <Form.Input name="details" placeholder="Details" value={this.state.details} onChange={this.handleChange} />
+              <p id='new-contract-label'>Milestones</p>
+                <Form.Input name="milestones" placeholder="Milestones" value={this.state.milestones} onChange={this.handleChange} />
+              <p id='new-contract-label'>Legal</p>
+                <Form.Input name="legal" placeholder="Legal" value={this.state.legal} onChange={this.handleChange} />
+              <p id='new-contract-label'>Copyright</p>
+                <Form.Input name="copyright" placeholder="Copyright" value={this.state.copyright} onChange={this.handleChange} />
+              <p id='new-contract-label'>Compensation</p>
+                <Form.Input name="compensation" placeholder="$" value={`${this.state.compensation}`} onChange={this.handleChange} />
+              <p id='new-contract-label'>Developer</p>
+                <Dropdown placeholder='Developer' name='developer_id' value={this.state.developer_id} fluid selection options={developersSemantic} onChange={this.handleDropdown} />
+              <div id='form-alert'>
+                {this.state.dev_match ? 'Developer and Contractor cannot be the same.'
+                : null}
+              </div>
+              <p id='new-contract-label'>Contractor</p>
+                <Dropdown placeholder='Contractor' name='contractor_id' value={this.state.contractor_id} fluid selection options={contractorsSemantic} onChange={this.handleDropdown} />
+                <div id='success-alert'>
+                  {this.state.success ? 'SUCCESS!'
+                  : null}
+                </div>
+              <Button type="submit">Done</Button>
             </Form>
         </div>
 
-        {/* <div>
-          <form onSubmit = {(event) => {
-            event.preventDefault()
-            this.handleSubmit(this.state)
-            }
-          }>
-            <input name="title" placeholder="Enter Title" value={this.state.title} onChange={this.handleChange}></input>
-            <input name="summary" placeholder="Enter Summary" value={this.state.summary} onChange={this.handleChange}></input>
-            <input name="details" placeholder="Enter Details" value={this.state.details} onChange={this.handleChange}></input>
-            <input name="milestones" placeholder="Enter Milestones" value={this.state.milestones} onChange={this.handleChange}></input>
-            <input name="legal" placeholder="Enter Legal" value={this.state.legal} onChange={this.handleChange}></input>
-            <input name="copyright" placeholder="Enter Copyright" value={this.state.copyright} onChange={this.handleChange}></input>
-            <input name="compensation" placeholder="Enter Compensation" value={this.state.compensation} onChange={this.handleChange}></input>
-            <b>Developer: </b>
-            <select onChange={this.handleChange} name="developer_id">
-              {developers}
-            </select>
-            <b>Contractor: </b>
-            <select onChange={this.handleChange} name="contractor_id">
-              {contractors}
-            </select>
-            <input type='submit' value='Done'/>
-          </form>
-        </div> */}
-
         <div className='contract'>
-          <br />
+            <br />
           <h2>Contract</h2>
-          <br />
+            <br />
           <h4>Title</h4> {this.state.title}<br />
-          <br />
+            <br />
           <h4>Summary</h4> {this.state.summary}<br />
-          <br />
+            <br />
           <h4>Details</h4> {this.state.details}<br />
-          <br />
+            <br />
           <h4>Milestones</h4> {this.state.milestones}<br />
-          <br />
+            <br />
           <h4>Legal</h4> {this.state.legal}<br />
-          <br />
+            <br />
           <h4>Copyright</h4> {this.state.copyright}<br />
-          <br />
-          <h4>Compensation</h4> {this.state.compensation}<br />
-          <br />
+            <br />
+          <h4>Compensation</h4> {`${this.state.compensation}`}<br />
+            <br />
+          <h4>Developer: {`${this.state.developer_id}`} Contractor: {`${this.state.contractor_id}`}<br /></h4>
+            <br />
         </div>
+        {/* <div id='success-alert'>
+          {this.state.success ? ''
+          : null}
+          /* SUCCESS
+        </div> */}
 
       </div>
     </div>
