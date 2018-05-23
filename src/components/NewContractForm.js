@@ -47,7 +47,7 @@ class NewContractForm extends React.Component{
 
   render(){
 
-    // console.log(this.state);
+    console.log(this.props);
     // console.log('developer: ', this.state.developer_id);
     // console.log('contractor: ', this.state.contractor_id);
 
@@ -64,9 +64,9 @@ class NewContractForm extends React.Component{
     })
 
     return(
-      <div className='new-contract-form-container'>
+      <div>
+        <div className='new-contract-form-container'>
         <div className='new-contract-form'>
-          {/* onSubmit={this.handleSubmit} */}
             <Form widths='equal' onSubmit = {(event) => {
               event.preventDefault()
               console.log('line 73', this.state);
@@ -80,8 +80,8 @@ class NewContractForm extends React.Component{
               <Form.Input name="legal" placeholder="Enter Legal" value={this.state.legal} onChange={this.handleChange} />
               <Form.Input name="copyright" placeholder="Enter Copyright" value={this.state.copyright} onChange={this.handleChange} />
               <Form.Input name="compensation" placeholder="Enter Compensation" value={this.state.compensation} onChange={this.handleChange} />
-                <Dropdown placeholder='Developer' name='developer_id' fluid selection options={developersSemantic} onChange={this.handleDropdown} />
-                <Dropdown placeholder='Contractor' name='contractor_id' fluid selection options={contractorsSemantic} onChange={this.handleDropdown} />
+                <Dropdown placeholder='Developer' name='developer_id' value={this.props.contract ? this.props.contract.developer_id : null} fluid selection options={developersSemantic} onChange={this.handleDropdown} />
+                <Dropdown placeholder='Contractor' name='contractor_id' value={this.props.contract ? this.props.contract.contractor_id : null} fluid selection options={contractorsSemantic} onChange={this.handleDropdown} />
                 <Button type="submit">Create</Button>
             </Form>
         </div>
@@ -132,6 +132,7 @@ class NewContractForm extends React.Component{
         </div>
 
       </div>
+    </div>
     )
   }
 }

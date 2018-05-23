@@ -8,7 +8,7 @@ class MyProfile extends React.Component{
   // }
 
   render(){
-    console.log('line 10 props:', this.props.currentUser);
+    // console.log('line 10 props:', this.props.currentUser);
 
     const currentUsername = this.props.currentUser ? this.props.currentUser.username : 'nope'
     const currentFirstname = this.props.currentUser ? this.props.currentUser.first_name : 'nope'

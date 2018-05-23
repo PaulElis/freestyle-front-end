@@ -40,9 +40,9 @@ class SignupForm extends React.Component{
 			<div>
 				<div className='welcome-container'>
 					<div className='freelance-logo'>
-						<h1 id="freelance-logo-title">Freelancr</h1>
+						<h1 id="freelance-logo-title">Freestyle</h1>
 					</div>
-					<Form>
+					<Form id='welcome-form'>
 				    <Form.Group widths='equal'>
 							<Form.Input name="first_name" value={this.state.first_name} placeholder='First Name' onChange={this.handleChange}/>
 							<Form.Input name="last_name" value={this.state.last_name} placeholder='Last Name' onChange={this.handleChange}/><br />

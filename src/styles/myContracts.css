@@ -6,8 +6,6 @@ div.myContracts-container {
   margin-top: 5px;
 }
 
-
-
 #contracts-title {
   color: black;
   letter-spacing: 2px;
@@ -19,5 +17,5 @@ div.myContracts-container {
 div.three.column.row {
   padding-top: 10px;
   padding-bottom: 10px;
-  background-color: #f7f7f7;
+  /* background-color: #f7f7f7; */
 }

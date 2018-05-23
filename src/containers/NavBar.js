@@ -31,7 +31,7 @@ class NavBar extends React.Component {
             <Icon name='home' size='big' />
           </Menu.Item>
         <Menu.Menu position='left'>
-           <p id="navbar-freelance-logo-title">Freelancr</p>
+           <p id="navbar-freelance-logo-title">Freestyle</p>
         </Menu.Menu>
         <Menu.Menu position='right'>
           {/* <Menu.Item>

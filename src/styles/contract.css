@@ -1,0 +1,12 @@
+#card {
+  padding: 15px;
+  border: 1px solid white;
+  padding: 25px;
+  box-shadow: 10px 10px 15px grey;
+}
+
+#card-caption {
+  /* text-align: left; */
+  text-decoration: underline;
+  /* padding-left: 20px; */
+}

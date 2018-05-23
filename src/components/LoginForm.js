@@ -39,9 +39,9 @@ class LoginForm extends React.Component{
 			<div>
 				<div className='welcome-container'>
 					<div className='freelance-logo'>
-						<h1 id="freelance-logo-title">Freelancr</h1>
+						<h1 id="freelance-logo-title">Freestyle</h1>
 					</div>
-	        <Form>
+	        <Form id='welcome-form'>
 				    <Form.Group widths='equal'>
 				      <Form.Input name="username" value={this.state.username} placeholder='Username' onChange={this.handleChange} />
 				      <Form.Input type="password" name="password" value={this.state.password} placeholder='Password' onChange={this.handleChange} />
@@ -54,7 +54,7 @@ class LoginForm extends React.Component{
 							<Form.Checkbox label='I agree to the Terms and Conditions' />
 						</div>
 						<div>
-							Don't an account? <NavLink to="/signup">Sign up</NavLink>
+							Don't have an account? <NavLink to="/signup">Sign up</NavLink>
 						</div>
 					</Form>
 				</div>

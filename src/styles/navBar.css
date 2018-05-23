@@ -3,6 +3,13 @@ div.navBar-container {
   padding-bottom: 8px;
   background-color: #3DD387;
   color: white;
+  /* box-shadow: 0px 10px 15px 5px #3DD387; */
+  z-index: 1;
+  /* bottom   : 0;
+  left     : 0;
+  background-image : linear-gradient(to bottom,
+                  rgba(255,255,255, 0),
+                  rgba(255,255,255, 1) 95%); */
 }
 
 #navbar-freelance-logo-title {

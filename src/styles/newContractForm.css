@@ -1,8 +1,27 @@
 div.new-contract-form-container {
-  background-color: #f7f7f7;
   padding-top: 25px;
+  background-color: white;
+}
+
+div.contract {
+  /* background-color: #d8dfea; */
+  width: 65%;
+  float: right;
+}
+
+div.new-contract-form {
+  margin-top: 100px;
+  margin: auto;
+  width: 35%;
+  height: 100%;
+  border: 1px solid white;
+  padding: 25px;
+  background-color: #d8dfea;
+  /* background-color: #FFB697; */
+  box-shadow: 10px 10px 15px grey;
+  float: left;
 }
 
 body {
-    background-color: powderblue;
+    background-color: red;
 }

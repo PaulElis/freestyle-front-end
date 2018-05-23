@@ -1,4 +1,5 @@
 import React from 'react'
+import '../styles/contract.css'
 import {connect} from 'react-redux'
 import { Grid } from 'semantic-ui-react'
 
@@ -16,13 +17,12 @@ class Contract extends React.Component {
 
     return(
       <Grid.Column>
-          <div className="ui max width centered raised link cards">
-          <div className="card" style={{height: '15 rem'}} onClick={this.handleClick}>
-            {this.props.contract.title}<br />
-            <h4>Summary</h4> {this.props.contract.summary}<br />
-            <h4>Compensation</h4> {this.props.contract.compensation}<br />
-            <br />
-          </div>
+          <div className="ui max width centered raised link cards" >
+            <div className="card" style={{height: '15 rem'}} id='card' onClick={this.handleClick}>
+              <h3>{this.props.contract.title.slice(0, 30)}</h3>
+              <h4 id='card-caption'>Summary</h4> {this.props.contract.summary}
+              <h4 id='card-caption'>Compensation</h4> ${this.props.contract.compensation}<br />
+            </div>
           </div>
       </Grid.Column>
     )
