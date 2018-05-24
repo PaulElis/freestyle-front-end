@@ -15,9 +15,12 @@ class MyContracts extends React.Component{
   }
 
   componentDidMount(){
-    this.props.getContracts()
-    this.props.getUser()
-    // console.log('line 20:', this.props.currentUser);
+    if (!this.props.currentUser){
+      this.props.history.push('/login')
+    } else {
+        this.props.getContracts()
+        this.props.getUser()
+      }
   }
 
   setCurrentContract = (contract) => {

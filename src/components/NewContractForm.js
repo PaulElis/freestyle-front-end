@@ -1,6 +1,6 @@
 import React from 'react'
 import '../styles/newContractForm.css'
-import { Button, Form, Dropdown } from 'semantic-ui-react'
+import { Button, Form, Dropdown, Icon } from 'semantic-ui-react'
 // import { developersDropdown } from '../dropdown/dropdown.js'
 import {connect} from 'react-redux'
 import {getUsers, postContract, changeContract} from '../actions/actions'
@@ -21,10 +21,16 @@ class NewContractForm extends React.Component{
     dev_match: false,
     title_check: '',
     summary_check: '',
+    developer_signature: this.props.contract ? this.props.contract.developer_signature : '',
+    contractor_signature: false,
   }
 
   componentDidMount(){
-    this.props.getUsers()
+    if (!this.props.currentUser){
+      this.props.history.push('/login')
+    } else {
+      this.props.getUsers()
+    }
   }
 
   handleChange = (event) => {
@@ -64,6 +70,7 @@ class NewContractForm extends React.Component{
         })
       }
     } else {
+      // console.log('in changeContract');
       this.props.changeContract(contract, contract.id)
       this.setState({
         success: true
@@ -71,9 +78,29 @@ class NewContractForm extends React.Component{
     }
   }
 
+  handleDeveloperToggle = () => {
+    this.setState({
+      // leftActive: !this.state.leftActive,
+      developer_signature: !this.state.developer_signature,
+    }, () => this.handleSubmit(this.state))
+
+      // this.props.changeContract(this.state, this.state.id)
+   }
+
+  handleContractorToggle = () => this.setState({
+    rightActive: !this.state.rightActive,
+    contractor_signature: !this.state.contractor_signature,
+   })
+
   render(){
 
-    // console.log(this.props);
+    console.log('props', this.props.contract);
+    console.log('signature', this.state.developer_signature);
+    // console.log('leftActive', this.state.leftActive);
+
+    const { developer_signature } = this.state
+    // const { leftActive } = this.state
+    const { rightActive } = this.state
 
     const developersSemantic = this.props.users.map((user, index) => {
       return {key: index, value: user.id, text: `${user.first_name} ${user.last_name}`, user: user, id: user.id}
@@ -127,7 +154,7 @@ class NewContractForm extends React.Component{
                   {this.state.success ? 'SUCCESS!'
                   : null}
                 </div>
-              <Button type="submit">Done</Button>
+              <Button type="submit" size='large'>Done</Button>
             </Form>
         </div>
 
@@ -151,12 +178,20 @@ class NewContractForm extends React.Component{
             <br />
           <h4>Developer: {`${this.state.developer_id}`} Contractor: {`${this.state.contractor_id}`}<br /></h4>
             <br />
-        </div>
-        {/* <div id='success-alert'>
-          {this.state.success ? ''
-          : null}
-          /* SUCCESS
-        </div> */}
+            <div>
+              {this.props.contract && this.props.contract.developer_id === this.props.currentUser.id ?
+                <Button id='left-button' labelPosition='left' size='large' icon floated='left' toggle active={developer_signature} onClick={this.handleDeveloperToggle}>
+                  <Icon name='check' />
+                    Signature
+                </Button> : null }
+              {this.props.contract && this.props.contract.contractor_id === this.props.currentUser.id ?
+                <Button id='right-button' labelPosition='right' size='large' icon floated='right' toggle active={rightActive} onClick={this.handleContractorToggle}>
+                  <Icon name='check' />
+                    Signature
+                </Button>
+              : null}
+            </div>
+          </div>
 
       </div>
     </div>
@@ -165,8 +200,11 @@ class NewContractForm extends React.Component{
 }
 
 function mapStateToProps(state){
-  // console.log('line 74: state', state)
-  return {users: state.users}
+  // console.log('line 192: state', state)
+  return {
+    users: state.users,
+    currentUser: state.currentUser,
+  }
 }
 
 export default connect(mapStateToProps, {getUsers, postContract, changeContract})(NewContractForm)

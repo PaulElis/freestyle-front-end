@@ -7,6 +7,12 @@ class MyProfile extends React.Component{
   //   currentUser: '',
   // }
 
+  componentDidMount(){
+    if (!this.props.currentUser){
+      this.props.history.push('/login')
+    }
+  }
+
   render(){
     // console.log('line 10 props:', this.props.currentUser);
 
@@ -27,7 +33,7 @@ class MyProfile extends React.Component{
 function mapStateToProps(state){
   // console.log('line 22: state', state.currentUser)
   return {
-    currentUser: state.currentUser
+    currentUser: state.currentUser,
   }
 }
 

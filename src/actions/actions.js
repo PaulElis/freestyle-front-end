@@ -89,6 +89,20 @@ export function getUsers(){
   }
 }
 
+// export function signContract(newContract) {
+//   return (dispatch) => {
+//     return fetch(URL + "/contracts", {
+//       headers: headers,
+//       method: "POST",
+//       body: JSON.stringify({
+//         title: newContract.title,
+//       })
+//     })
+//     .then(res => res.json())
+//     .then(console.log)
+//   }
+// }
+
 export function postContract(newContract) {
   return (dispatch) => {
     return fetch(URL + "/contracts", {
@@ -104,6 +118,8 @@ export function postContract(newContract) {
         compensation: newContract.compensation,
         developer_id: newContract.developer_id,
         contractor_id: newContract.contractor_id,
+        developer_signature: newContract.developer_signature,
+        contractor_signature: newContract.contractor_signature,
       })
     })
     .then(res => res.json())
@@ -126,6 +142,8 @@ export function changeContract(contract, id) {
         compensation: contract.compensation,
         developer_id: contract.developer_id,
         contractor_id: contract.contractor_id,
+				developer_signature: contract.developer_signature,
+				contractor_signature: contract.contractor_signature,
       })
     })
     .then(res => res.json())
