@@ -151,7 +151,7 @@ class NewContractForm extends React.Component{
 
   render(){
 
-    console.log('props', this.props);
+    // console.log('props', this.props);
     // console.log(this.developerName());
 
     const { developer_signature } = this.state

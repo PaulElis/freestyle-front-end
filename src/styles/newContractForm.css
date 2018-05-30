@@ -1,7 +1,7 @@
 div.new-contract-form-container {
-  padding-top: 0px;
-  background-color: red;
-  height: 100%;
+  background-color: white;
+  /* height: 100%; */
+  display: flex;
 }
 
 #contract-label {
@@ -44,7 +44,6 @@ div.contract {
   background-image: url('http://www.designbolts.com/wp-content/uploads/2012/12/Vintage-Speckles-White-Seamless-Pattern-For-Website-Background.jpg');
   /* background-color: #fffff0; */
   width: 65%;
-  height: 100%;
   float: right;
   border: 1px solid #EAEAEA;
   padding-top: 40px;
@@ -59,14 +58,9 @@ div.contract {
 }
 
 div.new-contract-form {
-  margin-top: 100px;
-  margin: auto;
   width: 35%;
-  height: 100%;
   border: 1px solid white;
   padding: 25px;
-  padding-top: 32.5px;
-  padding-bottom: 32.5px;
   background-color: #8b9dc3;
   color: white;
   letter-spacing: 3px;

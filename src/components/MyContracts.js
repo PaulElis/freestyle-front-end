@@ -5,7 +5,6 @@ import { getContracts, getUser } from '../actions/actions'
 import { connect } from 'react-redux'
 
 import Contract from './Contract'
-import NewContractForm from './NewContractForm'
 
 class MyContracts extends React.Component{
 
@@ -20,20 +19,20 @@ class MyContracts extends React.Component{
     }
   }
 
-  setCurrentContract = (contract) => {
-    this.setState({
-      currentContract: contract
-    })
-  }
+  // setCurrentContract = (contract) => {
+  //   this.setState({
+  //     currentContract: contract
+  //   })
+  // }
 
-  renderContract = (routerProps) => {
-    const contractId = routerProps.match.params.contractId
-    const contract = this.props.myContracts.find((contract) => contract.id == contractId)
-    if (contract)
-      return <NewContractForm {...routerProps} contract={this.state.currentContract} index={this.state.currentContract.id} key={this.state.currentContract.id}/>
-    // else
-      // return (<NotFound />)
-  }
+  // renderContract = (routerProps) => {
+  //   const contractId = routerProps.match.params.contractId
+  //   const contract = this.props.myContracts.find((contract) => contract.id == contractId)
+  //   if (contract)
+  //     return <NewContractForm {...routerProps} contract={this.state.currentContract} index={this.state.currentContract.id} key={this.state.currentContract.id}/>
+  //   // else
+  //     // return (<NotFound />)
+  // }
 
   render(){
 
