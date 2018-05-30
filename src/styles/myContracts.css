@@ -1,5 +1,6 @@
 div.myContracts-container {
   background-color: #f7f7f7;
+  height: 100%;
 }
 
 #myContracts-grid {
@@ -12,10 +13,13 @@ div.myContracts-container {
   font-family: 'PT Sans Narrow', sans-serif;
   margin-left: 20px;
   padding-top: 10px;
+  /* background-color: #8b9dc3; */
+  margin-left: 0px;
+  padding-left: 50px;
+  padding-right: 80%;
 }
 
 div.three.column.row {
   padding-top: 10px;
   padding-bottom: 10px;
-  /* background-color: #f7f7f7; */
 }

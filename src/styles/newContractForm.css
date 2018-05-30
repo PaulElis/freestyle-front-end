@@ -1,11 +1,23 @@
 div.new-contract-form-container {
   padding-top: 0px;
   background-color: red;
+  height: 100%;
+}
+
+#contract-label {
+  font-family: 'PT Sans Narrow', sans-serif;
+  letter-spacing: 3px;
+  font-weight: bold;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
 #form-alert {
   color: red;
   padding-top: 10px;
+  font-weight: bold;
+  font-size: 20px;
+  text-shadow: 2px 2px 0 black;
 }
 
 #left-button {
@@ -15,13 +27,11 @@ div.new-contract-form-container {
 }
 
 #developer-approve {
-  text-align: left;
-  margin-left: 35px;
+  padding-right: 530px;
 }
 
 #contractor-approve {
-  text-align: right;
-  margin-right: 35px;
+  padding-left: 35px;
 }
 
 #right-button {
@@ -31,16 +41,21 @@ div.new-contract-form-container {
 }
 
 div.contract {
-  background-color: #fffff0;
+  background-image: url('http://www.designbolts.com/wp-content/uploads/2012/12/Vintage-Speckles-White-Seamless-Pattern-For-Website-Background.jpg');
+  /* background-color: #fffff0; */
   width: 65%;
+  height: 100%;
   float: right;
   border: 1px solid #EAEAEA;
-  padding-bottom: 75px;
+  padding-top: 40px;
+  padding-bottom: 40px;
   box-shadow: 0px 10px 10px grey;
-  padding-left: 80px;
-  padding-right: 80px;
-
-  /* font-family: 'PT Sans Narrow', sans-serif; */
+  padding-left: 120px;
+  padding-right: 120px;
+  font-size: 20px;
+  font-family: 'Indie Flower', cursive;
+  letter-spacing: 2px;
+  line-height: 25px;
 }
 
 div.new-contract-form {
@@ -52,14 +67,16 @@ div.new-contract-form {
   padding: 25px;
   padding-top: 32.5px;
   padding-bottom: 32.5px;
-  background-color: #d8dfea;
-  /* background-color: #FFB697; */
+  background-color: #8b9dc3;
+  color: white;
+  letter-spacing: 3px;
   box-shadow: 0px 10px 10px grey;
   float: left;
 }
 
 #new-contract-label{
   text-align: left;
+  font-size: 15px;
 }
 
 #success-alert {
@@ -71,17 +88,3 @@ div.new-contract-form {
   padding-top: 5px;
   padding-bottom: 5px;
 }
-
-/* #success-alert {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 150px;
-  opacity: 0;
-} */
-
-/* body {
-    background-color: red;
-} */

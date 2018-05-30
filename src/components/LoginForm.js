@@ -1,6 +1,6 @@
 import React from 'react'
 import '../styles/welcome.css'
-import { Button, Form } from 'semantic-ui-react'
+import { Button, Form, Icon } from 'semantic-ui-react'
 import { connect } from 'react-redux'
 import { login } from '../actions/actions'
 import { NavLink } from 'react-router-dom'
@@ -15,7 +15,7 @@ class LoginForm extends React.Component{
 	}
 
 	handleChange = (event) => {
-		console.log('in handleChange');
+		// console.log('in handleChange');
 		this.setState({
 			[event.target.name]: event.target.value
 		})
@@ -46,12 +46,15 @@ class LoginForm extends React.Component{
 				      <Form.Input name="username" value={this.state.username} placeholder='Username' onChange={this.handleChange} />
 				      <Form.Input type="password" name="password" value={this.state.password} placeholder='Password' onChange={this.handleChange} />
 						</Form.Group>
-							<Button onClick={this.handleLogin}>Login</Button>
+							<Button fluid size='large' color='blue' icon labelPosition='right' onClick={this.handleLogin}>
+									Login
+								<Icon name='right arrow' />
+							</Button>
 						<div className='alert'>
 							{this.state.alert}
 						</div>
 						<div className='checkbox'>
-							<Form.Checkbox label='I agree to the Terms and Conditions' />
+							<Form.Checkbox label='I agree to the Terms and Conditions' defaultChecked />
 						</div>
 						<div>
 							Don't have an account? <NavLink to="/signup">Sign up</NavLink>

@@ -1,6 +1,6 @@
 import React from 'react'
 import '../styles/welcome.css'
-import { Form, Button } from 'semantic-ui-react'
+import { Form, Button, Icon } from 'semantic-ui-react'
 import { connect } from 'react-redux'
 import { signup } from '../actions/actions'
 import { NavLink } from 'react-router-dom'
@@ -26,11 +26,13 @@ class SignupForm extends React.Component{
 
 	handleSubmit = (event) => {
 		console.log(this.state)
-		if (this.state.password === this.state.passwordConfirmation){
+		if (this.state.first_name === '' || this.state.last_name === '' || this.state.username === '' || this.state.password === '' || this.state.passwordConfirmation === ''){
+			this.setState({alert: 'Please ensure all fields are completed.'})
+		} else if(this.state.password === this.state.passwordConfirmation){
 			this.props.signup(this.state.username, this.state.first_name, this.state.last_name, this.state.password)
 			.then(()=> localStorage.getItem("token") ? this.props.history.push("/home") : this.setState({alert: 'Please ensure username is unique and password fields match.'}) )
 		} else {
-			this.setState({alert: 'Please ensure username is unique and password fields match.'})
+			this.setState({alert: 'Please ensure password fields match.'})
 		}
 	}
 
@@ -52,12 +54,15 @@ class SignupForm extends React.Component{
 							<Form.Input type="password" name="password" value={this.state.password} placeholder='Password' onChange={this.handleChange}/>
 							<Form.Input type="password" name="passwordConfirmation" value={this.state.passwordConfirmation} placeholder='Confirm Password' onChange={this.handleChange}/>
 						</Form.Group>
-							<Button onClick={this.handleSubmit}>Signup</Button>
+							<Button fluid size='large' color='blue' icon labelPosition='right' onClick={this.handleSubmit}>
+									Signup
+								<Icon name='right arrow' />
+							</Button>
 						<div className='alert'>
 							{this.state.alert}
 						</div>
 						<div className='checkbox'>
-							<Form.Checkbox label='I agree to the Terms and Conditions' />
+							<Form.Checkbox label='I agree to the Terms and Conditions' defaultChecked />
 						</div>
 						<div>
 							Already have an account? <NavLink to="/login">Log in</NavLink>

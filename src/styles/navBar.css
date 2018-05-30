@@ -6,7 +6,9 @@ div.navBar-container {
   background-color: #3DD387;
   color: white;
   z-index: 1;
-
+  border-bottom: solid;
+  border-width: 0.05px;
+  border-color: #d0eaf1;
 }
 
 #navbar-freelance-logo-title {

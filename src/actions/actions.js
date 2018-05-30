@@ -23,7 +23,7 @@ export function login(username, password){
 }
 
 export function logout(){
-  console.log('removed token:', localStorage.jwt);
+  // console.log('removed token:', localStorage.jwt);
 	localStorage.removeItem("token")
 	return {
 		type: "LOGOUT"
@@ -120,6 +120,7 @@ export function postContract(newContract) {
         contractor_id: newContract.contractor_id,
         developer_signature: newContract.developer_signature,
         contractor_signature: newContract.contractor_signature,
+        approved: newContract.approved,
       })
     })
     .then(res => res.json())
@@ -144,6 +145,7 @@ export function changeContract(contract, id) {
         contractor_id: contract.contractor_id,
 				developer_signature: contract.developer_signature,
 				contractor_signature: contract.contractor_signature,
+				approved: contract.approved,
       })
     })
     .then(res => res.json())

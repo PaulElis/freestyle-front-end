@@ -11,15 +11,6 @@ div.welcome-container {
   background-color: #FFB697;
 }
 
-/* Form.form {
-  margin: auto;
-  width: 40%;
-  border: 1px solid white;
-  padding: 25px;
-  background-color: #3DD387;
-  box-shadow: 10px 10px 15px grey;
-} */
-
 #welcome-form {
   margin: auto;
   width: 40%;
@@ -27,6 +18,8 @@ div.welcome-container {
   padding: 25px;
   background-color: #3DD387;
   box-shadow: 10px 10px 15px grey;
+  font-size: 15px;
+
 }
 
 div.freelance-logo {
@@ -44,4 +37,5 @@ div.alert {
 
 div.checkbox {
   padding-bottom: 10px;
+
 }

@@ -14,11 +14,12 @@ div.home-about {
   padding-bottom: 200px;
   padding-left: 250px;
   padding-right: 250px;
+  /* background-color: #d0eaf1; */
 }
 
 div.home-review {
   color: white;
-  background-color: grey;
+  background-color: #8b9dc3;
   padding-top: 200px;
   padding-bottom: 200px;
 }

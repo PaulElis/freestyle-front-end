@@ -1,20 +1,17 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import {getUser} from '../actions/actions'
+import { Image } from 'semantic-ui-react'
 import '../styles/myProfile.css'
 
 class MyProfile extends React.Component{
-  // state= {
-  //   currentUser: '',
-  // }
 
   componentDidMount(){
-    if (!this.props.currentUser){
-      this.props.history.push('/login')
-    }
+    this.props.getUser()
   }
 
   render(){
-    // console.log('line 10 props:', this.props.currentUser);
+    console.log('line 17 props:', this.props.currentUser);
 
     const currentUsername = this.props.currentUser ? this.props.currentUser.username : 'nope'
     const currentFirstname = this.props.currentUser ? this.props.currentUser.first_name : 'nope'
@@ -22,9 +19,14 @@ class MyProfile extends React.Component{
 
     return(
       <div className='myProfile-container'>
-        <h3>MyProfile</h3>
-        {currentUsername} <br />
-        {currentFirstname} {currentLastname} <br />
+        <div className='myProfile-info'>
+          <h2>MyProfile</h2>
+          <Image src='https://www.watsonmartin.com/wp-content/uploads/2016/03/default-profile-picture.jpg' size='medium' circular centered />
+          <h3>Username: {currentUsername} </h3>
+          <h3>Full Name: {currentFirstname} {currentLastname} </h3>
+          {/* <h3>Developer Contracts:  {this.props.contractor_contracts}</h3> */}
+          {/* <h3>Contractor Contracts:  </h3> */}
+        </div>
       </div>
     )
   }
@@ -37,4 +39,4 @@ function mapStateToProps(state){
   }
 }
 
-export default connect(mapStateToProps)(MyProfile)
+export default connect(mapStateToProps, {getUser})(MyProfile)

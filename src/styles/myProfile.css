@@ -1,11 +1,28 @@
 div.myProfile-container {
-  padding-top: 420px;
-  padding-bottom: 420px;
+  padding-top: 210px;
+  padding-bottom: 300px;
   background-color: #FFB697;
   color: #ffffff;
   text-shadow: black 0.1em 0.1em 0.2em
 }
 
+div.myProfile-info {
+  background-color: #8b9dc3;
+  border-style: solid;
+  border-color: white;
+  border-width: 2px;
+  border-radius: 5px;
+  color: white;
+  text-shadow: black 0.1em 0.1em 0.2em;
+  margin-left: 650px;
+  margin-right: 650px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
 body {
   background-color: #FFB697;
+}
+#profile-image {
+  width: 40%;
 }

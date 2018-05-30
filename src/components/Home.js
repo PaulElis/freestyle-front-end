@@ -5,15 +5,9 @@ import '../styles/home.css'
 class Home extends React.Component{
   state={}
 
-  componentDidMount(){
-    if (!this.props.currentUser){
-        this.props.history.push('/login')
-      }
-  }
-
   render(){
 
-    console.log(this.props);
+    // console.log(this.props);
 
     return(
       <div className="home-container">
