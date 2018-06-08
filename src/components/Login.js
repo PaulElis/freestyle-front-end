@@ -33,7 +33,9 @@ class Login extends React.Component{
 		return (
 			<div>
 				<div>
-					{ this.state.signup ? <SignupForm history={this.props.history} username={this.state.username} password={this.state.password} signup={this.state.signup} alert={this.state.alert} handleChange={this.handleChange} handleLogin={this.handleLogin} handleSignup={this.handleSignup}/> : <LoginForm history={this.props.history} username={this.state.username} password={this.state.password} signup={this.state.signup} alert={this.state.alert} handleChange={this.handleChange} handleLogin={this.handleLogin} handleSignup={this.handleSignup} /> }
+					{ this.state.signup ?
+						<SignupForm history={this.props.history} username={this.state.username} password={this.state.password} signup={this.state.signup} alert={this.state.alert} handleChange={this.handleChange} handleLogin={this.handleLogin} handleSignup={this.handleSignup}/>
+						: <LoginForm history={this.props.history} username={this.state.username} password={this.state.password} signup={this.state.signup} alert={this.state.alert} handleChange={this.handleChange} handleLogin={this.handleLogin} handleSignup={this.handleSignup} /> }
 				</div>
 			</div>
 		)

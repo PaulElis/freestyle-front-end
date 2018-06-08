@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-// import {Button} from 'semantic-ui-react'
-
-// import {BrowserRouter as Router, Route} from 'react-router-dom';
 import './App.css';
 import { connect } from 'react-redux'
 
@@ -11,8 +8,8 @@ import SignupForm from './components/SignupForm'
 import NewContractForm from './components/NewContractForm'
 import MyContracts from './components/MyContracts'
 import MyProfile from './components/MyProfile'
-import {getUser, logout, getContracts, getUsers} from './actions/actions'
 import Login from './components/Login'
+import {getUser, logout, getContracts, getUsers} from './actions/actions'
 import {Route, withRouter} from 'react-router-dom'
 
 

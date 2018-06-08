@@ -16,7 +16,9 @@ class Home extends React.Component{
         </div>
         <div className="home-about">
           <h1>Discover the Freestyle difference!</h1>
-          Empowering projects by providing a solid foundation Freestyle helps ideas get off the ground running. With Freestyle experience a seamless transition from concept to completion with mutual outlined expectations.
+          Empowering projects by providing a solid foundation Freestyle helps ideas get off the ground running.
+          <br />
+          With Freestyle experience a seamless transition from concept to completion with mutual outlined expectations.
         </div>
         <div className="home-review">
           <h1>Our Members Tell It Like It Is</h1>

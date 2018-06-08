@@ -235,7 +235,7 @@ class NewContractForm extends React.Component{
                   {this.props.contract && this.props.contract.developer_id ? `${this.props.contract.developer.first_name} ${this.props.contract.developer.last_name}` : null}
                 </Button.Content>
                   <Button.Content hidden>
-                    Click here to sign contract.
+                    Click to sign.
                   </Button.Content>
               </Button>
                :
@@ -249,7 +249,7 @@ class NewContractForm extends React.Component{
                   {this.props.contract && this.props.contract.contractor_id ? `${this.props.contract.contractor.first_name} ${this.props.contract.contractor.last_name}` : null}
                 </Button.Content>
                   <Button.Content hidden>
-                    Click here to sign contract.
+                    Click to sign.
                   </Button.Content>
               </Button>
               :

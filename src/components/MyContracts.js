@@ -19,21 +19,6 @@ class MyContracts extends React.Component{
     }
   }
 
-  // setCurrentContract = (contract) => {
-  //   this.setState({
-  //     currentContract: contract
-  //   })
-  // }
-
-  // renderContract = (routerProps) => {
-  //   const contractId = routerProps.match.params.contractId
-  //   const contract = this.props.myContracts.find((contract) => contract.id == contractId)
-  //   if (contract)
-  //     return <NewContractForm {...routerProps} contract={this.state.currentContract} index={this.state.currentContract.id} key={this.state.currentContract.id}/>
-  //   // else
-  //     // return (<NotFound />)
-  // }
-
   render(){
 
     const developerContracts = this.props.currentUser && this.props.currentUser.developer_contracts ? this.props.currentUser.developer_contracts.map((contract, index) =>

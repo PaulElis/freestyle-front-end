@@ -6,19 +6,19 @@ import '../styles/myProfile.css'
 
 class MyProfile extends React.Component{
 
-  state={
-    modal: true
-  }
+  // state={
+  //   modal: true
+  // }
 
   componentDidMount(){
     this.props.getUser()
   }
 
-  exitModal = () => {
-    this.setState({
-      modal: false
-    })
-  }
+  // exitModal = () => {
+  //   this.setState({
+  //     modal: false
+  //   })
+  // }
 
   render(){
     // console.log('line 14 props:', this.props.currentUser);
@@ -29,7 +29,7 @@ class MyProfile extends React.Component{
 
     return(
       <div className='myProfile-container'>
-        {/* <Modal open='true' className='myProfile-info'>
+        {/* <Modal className='myProfile-info'>
           <Modal.Header><h2>MyProfile</h2></Modal.Header>
           <Modal.Content image>
             <Image id='profile-image' circular centered size='medium' src='https://www.watsonmartin.com/wp-content/uploads/2016/03/default-profile-picture.jpg' />
