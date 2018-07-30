@@ -41,7 +41,7 @@ class MyContracts extends React.Component{
                 <Grid.Row columns={3}> {developerContracts} </Grid.Row>
               </Grid>
               <Grid divided='vertically'>
-                <h1 id='contracts-title'>Contractor Contracts</h1>
+                <h1 id='contracts-title'>Client Contracts</h1>
                 <Grid.Row columns={3}> {contractorContracts} </Grid.Row>
               </Grid>
             </div>

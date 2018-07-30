@@ -1,12 +1,12 @@
 div.home-container {
-  background-color: #FFB697;
+  background-color: #FEB83D;
   color: #ffffff;
   text-shadow: black 0.1em 0.1em 0.2em;
   font-size: 20px;
 }
 
 img.home-image {
-  width: 100%;
+  width: 50%;
 }
 
 div.home-about {
@@ -15,7 +15,7 @@ div.home-about {
   padding-left: 250px;
   padding-right: 250px;
   line-height: 35px;
-  /* background-color: #d0eaf1; */
+  background-color: #FFB697;
 }
 
 div.home-review {

@@ -12,7 +12,7 @@ class Home extends React.Component{
     return(
       <div className="home-container">
         <div>
-          <img className="home-image" src='https://thelatestfreelanceblog.joomla.com/images/7.jpg' alt='oh no!'/>
+          <img className="home-image" src='http://workplaceinsight.net/wp-content/uploads/2017/11/Flexible-working-offer.jpg' alt='oh no!'/>
         </div>
         <div className="home-about">
           <h1>Discover the Freestyle difference!</h1>

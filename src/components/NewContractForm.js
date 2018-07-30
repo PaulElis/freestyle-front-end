@@ -201,8 +201,8 @@ class NewContractForm extends React.Component{
                   {this.state.dev_match ? 'Developer and Contractor cannot be the same.'
                   : null}
                 </div>
-                <p id='new-contract-label'>Contractor</p>
-                  <Dropdown placeholder='Contractor' name='contractor_id'  disabled={this.state.approved} value={this.state.contractor_id} fluid selection options={contractorsSemantic} onChange={this.handleDropdown} />
+                <p id='new-contract-label'>Client</p>
+                  <Dropdown placeholder='Client' name='contractor_id'  disabled={this.state.approved} value={this.state.contractor_id} fluid selection options={contractorsSemantic} onChange={this.handleDropdown} />
                   <div id='success-alert'>
                     {this.state.success ? 'SUCCESS!'
                     : null}
