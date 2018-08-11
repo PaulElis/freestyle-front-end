@@ -1,32 +1,63 @@
 div.home-container {
   background-color: white;
-  font-size: 20px;
+  /* padding-top: 10px; */
+  /* margin: 0px 2% 0px 2%; */
+  /* padding: 10px 2% 0px 2%; */
 }
 
 div.home-first-level{
   display: flex;
+  padding: 10px 6% 0px 6%;
+  border: 1px solid green;
 }
-
-/* div.home-image{
-  width: 40%;
-  height: 40%;
-} */
 
 img.home-image {
   width: 40%;
   height: 40%;
-}
-
-div.home-about {
-  line-height: 35px;
-  background-color: white;
-  width: 60%;
-  padding-top: 230px;
   border: 1px solid green;
 }
 
+div.home-about {
+  /* color: #2F8284; */
+  text-align: left;
+  line-height: 35px;
+  background-color: white;
+  width: 60%;
+  padding: 20px 80px 0px 100px;
+  border: 1px solid green;
+}
+
+div#home-about-title{
+  font-family: serif;
+  font-size: 80px;
+  font-weight: bold;
+  line-height: 80px;
+}
+
+p#home-about-text{
+  font-size: 20px;
+  letter-spacing: 3px;
+  line-height: 35px;
+  padding-top: 30px;
+}
+
 div.home-review {
+  font-size: 20px;
   background-color: white;
   padding-top: 200px;
   padding-bottom: 200px;
+}
+
+div#home-review-title{
+  font-family: serif;
+  font-size: 35px;
+  font-weight: bold;
+  line-height: 20px;
+}
+
+p#home-review-text{
+  font-size: 21px;
+  letter-spacing: 2px;
+  line-height: 35px;
+  padding: 30px 15% 0px 15%;
 }
