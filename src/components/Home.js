@@ -12,7 +12,7 @@ class Home extends React.Component{
     return(
       <div className="home-container">
 
-        {/* <div className='home-first-level'> */}
+        <div className='home-first-level'>
           {/* <div className='home-image'> */}
             <img className="home-image" src='http://workplaceinsight.net/wp-content/uploads/2017/11/Flexible-working-offer.jpg' alt='oh no!'/>
           {/* </div> */}
@@ -22,7 +22,7 @@ class Home extends React.Component{
             <br />
             With Freestyle experience a seamless transition from concept to completion with mutual outlined expectations.
           </div>
-        {/* </div> */}
+        </div>
 
           <div className="home-review">
             <h1>Our Members Tell It Like It Is</h1>
