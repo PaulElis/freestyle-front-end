@@ -24,14 +24,12 @@ class NavBar extends React.Component {
 
   return (
     <div className="navBar-container">
-      {/* <Menu size='large'> */}
       <Menu secondary>
-          <Menu.Item id="navBar-item" name='Home' active={activeItem === 'messages'} onClick={() => {
+        <Menu.Menu position='left' >
+          <Menu.Item name='Home' active={activeItem === 'messages'} onClick={() => {
             this.props.history.push('/home')}} >
-            <Icon name='home' size='big' />
+              <p id="navbar-freelance-logo-title">Freestyle</p>
           </Menu.Item>
-        <Menu.Menu position='left'>
-           <p id="navbar-freelance-logo-title">Freestyle</p>
         </Menu.Menu>
         <Menu.Menu position='right'>
           {/* <Menu.Item>
@@ -56,12 +54,6 @@ class NavBar extends React.Component {
           </Menu.Item>
         </Menu.Menu>
       </Menu>
-      {/* </Menu> */}
-      {/* <b><NavLink to="/Home">Home</NavLink></b>
-      <b>Freelancr</b>
-      <b><NavLink to="/MyContracts">MyContracts</NavLink></b>
-      <b><NavLink to="/NewContractForm">NewContract</NavLink></b>
-      <b><NavLink to="/MyProfile">MyProfile</NavLink></b> */}
     </div>
   );
   };

@@ -17,7 +17,7 @@ class Home extends React.Component{
           <div className="home-about">
             <div id='home-about-title'>Where Freelance Happens</div>
             <p id='home-about-text'>Freestyle empowers projects by providing a solid foundation to help ideas get off the ground running.
-            With Freestyle experience a seamless transition from concept to completion with mutual outlined expectations.
+            Experience a seamless transition from concept to completion with mutually outlined expectations.
             </p>
           </div>
         </div>

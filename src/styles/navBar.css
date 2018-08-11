@@ -1,14 +1,11 @@
 div.navBar-container {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding: 8px 60px 8px 60px;
   background-color: white;
   color: white;
   z-index: 1;
   border-bottom: solid;
   border-width: 0.05px;
-  border-color: #d0eaf1;
+  border-color: #F0EFEF;
 }
 
 #navbar-freelance-logo-title {
@@ -16,10 +13,10 @@ div.navBar-container {
   font-family: serif;
   font-weight: bold;
   /* font-family: 'Pacifico', cursive; */
-  letter-spacing: -1px;
-  font-size: 35px;
-  position: absolute;
-  left: 44.5%;
+  /* letter-spacing: 1px; */
+  font-size: 30px;
+  /* position: absolute; */
+  /* left: 44.5%; */
   /* position: relative; */
   /* left: 390%; */
 }
