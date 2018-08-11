@@ -1,4 +1,5 @@
-const URL = 'http://localhost:3000/api/v1'
+// const URL = 'http://localhost:3000/api/v1'
+const URL = 'https://freelancer-backend.herokuapp.com/api/v1'
 const headers = { "Content-Type": "application/json"}
 
 export function login(username, password){

@@ -16,19 +16,16 @@ import {Route, withRouter} from 'react-router-dom'
 class App extends Component {
 
   componentDidMount(){
-    // console.log('in line 22', localStorage.getItem("token"));
     this.props.getUsers()
 
 		if (localStorage.getItem("token")){
 			this.props.getUser()
       .then(()=> {
-
         this.props.getContracts()
         .then(() => {
           this.props.history.push(this.props.location.pathname)
         })
       })
-
 		} else {
       this.props.history.push('/login')
     }

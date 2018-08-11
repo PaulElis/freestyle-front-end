@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import {getUser} from '../actions/actions'
-import { Image, Modal, Header } from 'semantic-ui-react'
+import { Image } from 'semantic-ui-react'
 import '../styles/myProfile.css'
 
 class MyProfile extends React.Component{
