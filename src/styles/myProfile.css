@@ -6,11 +6,11 @@ div.myProfile-container {
 
 div.myProfile-info {
   color: black;
-  border-color: grey;
-  border-style: hidden;
+  border-color: #28929E;
+  border-style: solid;
   border-width: 1px;
   border-radius: 5px;
-  padding: 20px;
+  padding: 50px;
   margin-left: 40%;
   margin-right: 40%;
 }

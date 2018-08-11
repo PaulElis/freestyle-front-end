@@ -13,13 +13,13 @@ class Home extends React.Component{
       <div className="home-container">
 
         <div className='home-about-container'>
-          <img className="home-image" src='http://workplaceinsight.net/wp-content/uploads/2017/11/Flexible-working-offer.jpg' alt='oh no!'/>
           <div className="home-about">
             <div id='home-about-title'>Where Freelance Happens</div>
             <p id='home-about-text'>Freestyle empowers projects by providing a solid foundation to help ideas get off the ground running.
             Experience a seamless transition from concept to completion with mutually outlined expectations.
             </p>
           </div>
+          <img className="home-image" src='http://workplaceinsight.net/wp-content/uploads/2017/11/Flexible-working-offer.jpg' alt='oh no!'/>
         </div>
 
           <div className="home-review-container">
