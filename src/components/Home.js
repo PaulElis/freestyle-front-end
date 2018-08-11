@@ -12,7 +12,7 @@ class Home extends React.Component{
     return(
       <div className="home-container">
 
-        <div className='home-first-level'>
+        <div className='home-about-container'>
           <img className="home-image" src='http://workplaceinsight.net/wp-content/uploads/2017/11/Flexible-working-offer.jpg' alt='oh no!'/>
           <div className="home-about">
             <div id='home-about-title'>Where Freelance Happens</div>
@@ -22,7 +22,7 @@ class Home extends React.Component{
           </div>
         </div>
 
-          <div className="home-review">
+          <div className="home-review-container">
             <div id='home-review-title'>The hub for your team and your work</div>
             <p id='home-review-text'>
               Freestyle is a place where you come together to collaborate, important information can be found by the right people, and your tools pipe in information when and where you need it.

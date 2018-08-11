@@ -5,16 +5,16 @@ div.home-container {
   /* padding: 10px 2% 0px 2%; */
 }
 
-div.home-first-level{
+div.home-about-container{
   display: flex;
-  padding: 10px 6% 0px 6%;
-  border: 1px solid green;
+  padding: 100px 6% 0px 6%;
+  /* border: 1px solid green; */
 }
 
 img.home-image {
   width: 40%;
   height: 40%;
-  border: 1px solid green;
+  /* border: 1px solid green; */
 }
 
 div.home-about {
@@ -23,15 +23,15 @@ div.home-about {
   line-height: 35px;
   background-color: white;
   width: 60%;
-  padding: 20px 80px 0px 100px;
-  border: 1px solid green;
+  padding: 40px 80px 0px 100px;
+  /* border: 1px solid green; */
 }
 
 div#home-about-title{
   font-family: serif;
-  font-size: 80px;
+  font-size: 60px;
   font-weight: bold;
-  line-height: 80px;
+  line-height: 60px;
 }
 
 p#home-about-text{
@@ -41,11 +41,11 @@ p#home-about-text{
   padding-top: 30px;
 }
 
-div.home-review {
+div.home-review-container {
   font-size: 20px;
   background-color: white;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 150px;
+  padding-bottom: 150px;
 }
 
 div#home-review-title{
