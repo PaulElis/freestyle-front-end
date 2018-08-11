@@ -1,22 +1,25 @@
 div.myProfile-container {
-  padding-top: 210px;
-  padding-bottom: 300px;
-  background-color: #FFB697;
-  color: #ffffff;
-  text-shadow: black 0.1em 0.1em 0.2em
+  padding: 15% 0px 50px 0px;
+  background-color: white;
+  color: black;
 }
 
 div.myProfile-info {
-  background-color: #8b9dc3;
-  border-style: solid;
-  border-color: white;
-  border-width: 2px;
+  color: black;
+  border-color: grey;
+  border-style: hidden;
+  border-width: 1px;
   border-radius: 5px;
-  color: white;
-  text-shadow: black 0.1em 0.1em 0.2em;
-  margin-left: 650px;
-  margin-right: 650px;
-  padding: 60px;
+  padding: 20px;
+  margin-left: 40%;
+  margin-right: 40%;
+}
+
+p#myProfile-text{
+  font-size: 15px;
+  /* font-weight: bold; */
+  padding: 10px 0px 0px 0px;
+  line-height: 25px;
 }
 
 /* div.ui.modal.transition.visible.active.myProfile-info {
@@ -38,6 +41,6 @@ div.myProfile-info {
   background-color: #FFB697;
 } */
 
-#profile-image {
-  height: 40%;
-}
+/* #profile-image {
+  height: 20%;
+} */

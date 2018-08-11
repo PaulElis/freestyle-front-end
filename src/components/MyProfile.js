@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import {getUser} from '../actions/actions'
-import { Image } from 'semantic-ui-react'
+import { Image, Icon } from 'semantic-ui-react'
 import '../styles/myProfile.css'
 
 class MyProfile extends React.Component{
@@ -40,10 +40,10 @@ class MyProfile extends React.Component{
           </Modal.Content>
         </Modal> */}
           <div className='myProfile-info'>
-            <h2>MyProfile</h2>
-            <Image src='https://www.watsonmartin.com/wp-content/uploads/2016/03/default-profile-picture.jpg' size='medium' circular centered />
-            <h3>Username: {currentUsername} </h3>
-            <h3>Full Name: {currentFirstname} {currentLastname} </h3>
+              {/* <Image src='https://www.watsonmartin.com/wp-content/uploads/2016/03/default-profile-picture.jpg' size='small' circular centered /> */}
+              <Icon name='user outline' size='huge' />
+            <p id='myProfile-text'>Username: {currentUsername} <br />
+            Full Name: {currentFirstname} {currentLastname} </p>
           </div>
       </div>
     )
