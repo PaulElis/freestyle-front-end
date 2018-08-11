@@ -33,19 +33,14 @@ class MyContracts extends React.Component{
 
       return(
         <div className='myContracts-container'>
-          <div className='myContracts'>
-            {/*{this.state.currentContract === '' && this.props.currentUser ? */}
-            <div>
               <Grid divided='vertically' id='myContracts-grid'>
                 <h1 id='contracts-title'>Developer Contracts</h1>
-                <Grid.Row columns={3}> {developerContracts} </Grid.Row>
+                  <Grid.Row columns={3}> {developerContracts} </Grid.Row>
               </Grid>
-              <Grid divided='vertically'>
+              <Grid divided='vertically' id='myContracts-grid'>
                 <h1 id='contracts-title'>Client Contracts</h1>
-                <Grid.Row columns={3}> {contractorContracts} </Grid.Row>
+                  <Grid.Row columns={3}> {contractorContracts} </Grid.Row>
               </Grid>
-            </div>
-          </div>
         </div>
         )
     }
