@@ -174,41 +174,41 @@ class NewContractForm extends React.Component{
                 }
               }>
                 <p id='new-contract-label'>Title</p>
-                  <Form.TextArea name="title" placeholder="Title" disabled={this.state.approved} value={this.state.title} onChange={this.handleChange} />
+                  <Form.TextArea name="title" placeholder="" disabled={this.state.approved} value={this.state.title} onChange={this.handleChange} />
                   <div id='form-alert'>
                     {this.state.title_check ? 'Title must exist.'
                     : null}
                   </div>
                 <p id='new-contract-label'>Summary</p>
-                  <Form.TextArea name="summary" placeholder="Summary" disabled={this.state.approved} value={this.state.summary} onChange={this.handleChange} />
+                  <Form.TextArea name="summary" placeholder="" disabled={this.state.approved} value={this.state.summary} onChange={this.handleChange} />
                   <div id='form-alert'>
                     {this.state.summary_check ? 'Summary must exist.'
                     : null}
                   </div>
                 <p id='new-contract-label'>Details</p>
-                  <Form.TextArea name="details" placeholder="Details" disabled={this.state.approved} value={this.state.details} onChange={this.handleChange} />
+                  <Form.TextArea name="details" placeholder="" disabled={this.state.approved} value={this.state.details} onChange={this.handleChange} />
                 <p id='new-contract-label'>Milestones</p>
-                  <Form.TextArea name="milestones" placeholder="Milestones" disabled={this.state.approved} value={this.state.milestones} onChange={this.handleChange} />
+                  <Form.TextArea name="milestones" placeholder="" disabled={this.state.approved} value={this.state.milestones} onChange={this.handleChange} />
                 <p id='new-contract-label'>Legal</p>
-                  <Form.TextArea name="legal" placeholder="Legal" disabled={this.state.approved} value={this.state.legal} onChange={this.handleChange} />
+                  <Form.TextArea name="legal" placeholder="" disabled={this.state.approved} value={this.state.legal} onChange={this.handleChange} />
                 <p id='new-contract-label'>Copyright</p>
-                  <Form.TextArea name="copyright" placeholder="Copyright" disabled={this.state.approved} value={this.state.copyright} onChange={this.handleChange} />
+                  <Form.TextArea name="copyright" placeholder="" disabled={this.state.approved} value={this.state.copyright} onChange={this.handleChange} />
                 <p id='new-contract-label'>Compensation</p>
                   <Form.Input icon='dollar' iconPosition='left' name="compensation" disabled={this.state.approved} value={`${this.state.compensation}`} onChange={this.handleChange} />
                 <p id='new-contract-label'>Developer</p>
-                  <Dropdown placeholder='Developer' name='developer_id' disabled={this.state.approved} value={this.state.developer_id} fluid selection options={developersSemantic} onChange={this.handleDropdown} />
+                  <Dropdown placeholder='' name='developer_id' disabled={this.state.approved} value={this.state.developer_id} fluid selection options={developersSemantic} onChange={this.handleDropdown} />
                 <div id='form-alert'>
                   {this.state.dev_match ? 'Developer and Contractor cannot be the same.'
                   : null}
                 </div>
                 <p id='new-contract-label'>Client</p>
-                  <Dropdown placeholder='Client' name='contractor_id'  disabled={this.state.approved} value={this.state.contractor_id} fluid selection options={contractorsSemantic} onChange={this.handleDropdown} />
+                  <Dropdown placeholder='' name='contractor_id'  disabled={this.state.approved} value={this.state.contractor_id} fluid selection options={contractorsSemantic} onChange={this.handleDropdown} />
                   <div id='success-alert'>
                     {this.state.success ? 'SUCCESS!'
                     : null}
                   </div>
                 <br />
-                <Button color='blue' compact fluid type="submit" size='large' disabled={this.state.approved} >Submit</Button>
+                <Button color='black' compact fluid type="submit" size='large' disabled={this.state.approved} >Submit</Button>
               </Form>
           </div>
 

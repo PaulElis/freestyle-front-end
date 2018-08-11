@@ -2,6 +2,7 @@ div.new-contract-form-container {
   background-color: white;
   /* height: 100%; */
   display: flex;
+  padding: 0px 75px 0px 50px;
 }
 
 #contract-label {
@@ -41,14 +42,14 @@ div.new-contract-form-container {
 }
 
 div.contract {
-  background-image: url('http://www.designbolts.com/wp-content/uploads/2012/12/Vintage-Speckles-White-Seamless-Pattern-For-Website-Background.jpg');
-  /* background-color: #fffff0; */
+  /* background-image: url('http://www.designbolts.com/wp-content/uploads/2012/12/Vintage-Speckles-White-Seamless-Pattern-For-Website-Background.jpg'); */
+  background-color: white;
   width: 65%;
   float: right;
-  border: 1px solid #EAEAEA;
+  /* border: 1px solid #EAEAEA; */
   padding-top: 40px;
   padding-bottom: 40px;
-  box-shadow: 0px 10px 10px grey;
+  /* box-shadow: 0px 10px 10px grey; */
   padding-left: 120px;
   padding-right: 120px;
   font-size: 20px;
@@ -61,10 +62,11 @@ div.new-contract-form {
   width: 35%;
   border: 1px solid white;
   padding: 25px;
-  background-color: #8b9dc3;
-  color: white;
+  /* background-color: #8b9dc3; */
+  background-color: white;
+  color: black;
   letter-spacing: 3px;
-  box-shadow: 0px 10px 10px grey;
+  /* box-shadow: 0px 10px 10px grey; */
   float: left;
 }
 
