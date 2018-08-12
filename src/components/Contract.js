@@ -38,17 +38,12 @@ class Contract extends React.Component {
                 </Card.Meta>
                 <br />
                 <br />
-                {/* <Card.Description id='contracts-description'>
-                  Compensation <br />
-                  ${this.props.contract.compensation}
-                </Card.Description> */}
               </Card.Content>
               <Card.Content extra>
                 <span className="left floated">
                   Compensation
                 </span>
                 <span className="right floated">
-                  {/* Compensation <br /> */}
                   ${this.props.contract.compensation}
                 </span>
               </Card.Content>

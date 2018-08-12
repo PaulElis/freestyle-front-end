@@ -37,20 +37,20 @@ class NavBar extends React.Component {
           </Menu.Item> */}
           <Menu.Item id="navBar-item" name='My Contracts' active={activeItem === 'messages'} onClick={() => {
             this.props.history.push('/contracts')}} >
-            <Icon name='folder' size='big' />
+            <Icon name='folder' color='black' size='big' />
           </Menu.Item>
           <Menu.Item id="navBar-item" name='Create a Contract' active={activeItem === 'messages'} onClick={() => {
             this.props.history.push('/contracts/new')}} >
-            <Icon name='compose' size='big' />
+            <Icon name='compose' color='black' size='big' />
           </Menu.Item>
           <Menu.Item id="navBar-item" name='Profile' active={activeItem === 'messages'} onClick={() => {
             this.props.history.push('/profile')}} >
-            <Icon name='user' size='big' />
+            <Icon name='user' color='black' size='big' />
           </Menu.Item>
           <Menu.Item id="navBar-item" name='Logout' active={activeItem === 'messages'} onClick={() => {
             this.props.logout()
             this.props.history.push('/login')}} >
-              <Icon name='external square' size='big' />
+              <Icon name='external square' color='black' size='big' />
           </Menu.Item>
         </Menu.Menu>
       </Menu>

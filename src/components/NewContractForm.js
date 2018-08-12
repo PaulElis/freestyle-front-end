@@ -208,7 +208,7 @@ class NewContractForm extends React.Component{
                     : null}
                   </div>
                 <br />
-                <Button color='black' compact fluid type="submit" size='large' disabled={this.state.approved} >Submit</Button>
+                <Button color='white' compact fluid type="submit" size='large' disabled={this.state.approved} >Submit</Button>
               </Form>
           </div>
 
