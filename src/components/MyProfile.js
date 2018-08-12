@@ -23,9 +23,9 @@ class MyProfile extends React.Component{
   render(){
     // console.log('line 14 props:', this.props.currentUser);
 
-    const currentUsername = this.props.currentUser ? this.props.currentUser.username : 'nope'
-    const currentFirstname = this.props.currentUser ? this.props.currentUser.first_name : 'nope'
-    const currentLastname = this.props.currentUser ? this.props.currentUser.last_name : 'nope'
+    const currentUsername = this.props.currentUser ? this.props.currentUser.username : ''
+    const currentFirstname = this.props.currentUser ? this.props.currentUser.first_name : ''
+    const currentLastname = this.props.currentUser ? this.props.currentUser.last_name : ''
 
     return(
       <div className='myProfile-container'>
@@ -45,8 +45,9 @@ class MyProfile extends React.Component{
             Full Name: {currentFirstname} {currentLastname} </p>
           </div> */}
           <Card centered color='blue' onClick={this.handleClick}>
-            <Icon id='profile-icon' name='user outline' size='massive' />
-            <Card.Header>
+            {/* <Icon center id='profile-icon' name='user outline' size='massive' /> */}
+            <Image id='profile-image' circular centered size='small' src='https://www.watsonmartin.com/wp-content/uploads/2016/03/default-profile-picture.jpg' />
+            <Card.Header id='profile-header'>
               <span className="left floated">
                 Username
               </span>
@@ -54,7 +55,7 @@ class MyProfile extends React.Component{
                 {currentUsername}
               </span>
             </Card.Header>
-            <Card.Content extra>
+            <Card.Content extra id='profile-extra-content'>
               <span className="left floated">
                 Full Name
               </span>

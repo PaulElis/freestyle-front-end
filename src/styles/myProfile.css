@@ -5,12 +5,29 @@ div.myProfile-container {
 }
 
 div.ui.blue.centered.card{
-  align-items: center;
+  /* align-items: center; */
+  padding: 20px 0px 0px 0px;
 }
 
-div.myProfile-info {
+#profile-icon{
+  align-content: center;
+}
+
+#profile-header{
+  padding: 25px 15px 25px 15px;
+}
+
+
+/* p#myProfile-text{
+  font-size: 15px;
+  font-weight: bold;
+  padding: 15px 0px 0px 0px;
+  line-height: 25px;
+} */
+
+/* div.myProfile-info {
   color: black;
-  /* border-color: #28929E; */
+  border-color: #28929E;
   border-color: black;
   border-style: solid;
   border-width: 1px;
@@ -18,14 +35,7 @@ div.myProfile-info {
   padding: 50px;
   margin-left: 40%;
   margin-right: 40%;
-}
-
-p#myProfile-text{
-  font-size: 15px;
-  /* font-weight: bold; */
-  padding: 15px 0px 0px 0px;
-  line-height: 25px;
-}
+} */
 
 /* div.ui.modal.transition.visible.active.myProfile-info {
   background-color: #8b9dc3;
