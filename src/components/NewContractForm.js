@@ -1,6 +1,6 @@
 import React from 'react'
 import '../styles/newContractForm.css'
-import { Button, Form, Dropdown, Icon } from 'semantic-ui-react'
+import { Button, Form, Dropdown, Icon, Message } from 'semantic-ui-react'
 // import { developersDropdown } from '../dropdown/dropdown.js'
 import {connect} from 'react-redux'
 import {getUsers, postContract, changeContract} from '../actions/actions'
@@ -168,23 +168,37 @@ class NewContractForm extends React.Component{
     return(
         <div className='new-contract-form-container'>
           <div className='new-contract-form'>
-              <Form widths='equal' onSubmit = {(event) => {
+              <Form success error widths='equal' onSubmit = {(event) => {
                 event.preventDefault()
                 this.handleSubmit(this.state)
                 }
               }>
                 <p id='new-contract-label'>Title</p>
                   <Form.TextArea name="title" placeholder="" disabled={this.state.approved} value={this.state.title} onChange={this.handleChange} />
-                  <div id='form-alert'>
-                    {this.state.title_check ? 'Title must exist.'
+                  {/* <div id='form-alert'> */}
+                    {/* {this.state.title_check ? 'Title must exist.'
+                    : null} */}
+                    {this.state.title_check ?
+                      <Message
+                        error
+                        // header='Invalid Login'
+                        content='Title must exist.'
+                      />
                     : null}
-                  </div>
+                  {/* </div> */}
                 <p id='new-contract-label'>Summary</p>
                   <Form.TextArea name="summary" placeholder="" disabled={this.state.approved} value={this.state.summary} onChange={this.handleChange} />
-                  <div id='form-alert'>
-                    {this.state.summary_check ? 'Summary must exist.'
+                  {/* <div id='form-alert'> */}
+                    {/* {this.state.summary_check ? 'Summary must exist.'
+                    : null} */}
+                    {this.state.summary_check ?
+                      <Message
+                        error
+                        // header='Invalid Login'
+                        content='Summary must exist.'
+                      />
                     : null}
-                  </div>
+                  {/* </div> */}
                 <p id='new-contract-label'>Details</p>
                   <Form.TextArea name="details" placeholder="" disabled={this.state.approved} value={this.state.details} onChange={this.handleChange} />
                 <p id='new-contract-label'>Milestones</p>
@@ -197,16 +211,30 @@ class NewContractForm extends React.Component{
                   <Form.Input icon='dollar' iconPosition='left' name="compensation" disabled={this.state.approved} value={`${this.state.compensation}`} onChange={this.handleChange} />
                 <p id='new-contract-label'>Developer</p>
                   <Dropdown placeholder='' name='developer_id' disabled={this.state.approved} value={this.state.developer_id} fluid selection options={developersSemantic} onChange={this.handleDropdown} />
-                <div id='form-alert'>
-                  {this.state.dev_match ? 'Developer and Contractor cannot be the same.'
+                {/* <div id='form-alert'> */}
+                  {/* {this.state.dev_match ? 'Developer and Contractor cannot be the same.'
+                  : null} */}
+                  {this.state.dev_match ?
+                    <Message
+                      error
+                      // header='Invalid Login'
+                      content='Developer and Contractor cannot be the same.'
+                    />
                   : null}
-                </div>
+                {/* </div> */}
                 <p id='new-contract-label'>Client</p>
                   <Dropdown placeholder='' name='contractor_id'  disabled={this.state.approved} value={this.state.contractor_id} fluid selection options={contractorsSemantic} onChange={this.handleDropdown} />
-                  <div id='success-alert'>
-                    {this.state.success ? 'SUCCESS!'
+                  {/* <div id='success-alert'> */}
+                    {/* {this.state.success ? 'SUCCESS!'
+                    : null} */}
+                    {this.state.success ?
+                      <Message
+                        success
+                        // header='Form Completed'
+                        content="Contract submitted." 
+                      />
                     : null}
-                  </div>
+                  {/* </div> */}
                 <br />
                 <Button color='white' compact fluid type="submit" size='large' disabled={this.state.approved} >Submit</Button>
               </Form>

@@ -1,6 +1,6 @@
 import React from 'react'
 import '../styles/welcome.css'
-import { Form, Button, Icon } from 'semantic-ui-react'
+import { Form, Button, Icon, Message } from 'semantic-ui-react'
 import { connect } from 'react-redux'
 import { signup } from '../actions/actions'
 import { NavLink } from 'react-router-dom'
@@ -30,7 +30,8 @@ class SignupForm extends React.Component{
 			this.setState({alert: 'Please ensure all fields are completed.'})
 		} else if(this.state.password === this.state.passwordConfirmation){
 			this.props.signup(this.state.username, this.state.first_name, this.state.last_name, this.state.password)
-			.then(()=> localStorage.getItem("token") ? this.props.history.push("/home") : this.setState({alert: 'Please ensure username is unique and password fields match.'}) )
+			// .then(()=> localStorage.getItem("token") ? this.props.history.push("/home") : this.setState({alert: 'Please ensure username is unique and password fields match.'}) )
+			.then(()=> localStorage.getItem("token") ? this.props.history.push("/home") : this.setState({alert: true}) )
 		} else {
 			this.setState({alert: 'Please ensure password fields match.'})
 		}
@@ -44,7 +45,7 @@ class SignupForm extends React.Component{
 					<div className='freelance-logo'>
 						<h1 id="freelance-logo-title">Freestyle</h1>
 					</div>
-					<Form id='welcome-form'>
+					<Form error id='welcome-form'>
 				    <Form.Group widths='equal'>
 							<Form.Input name="first_name" value={this.state.first_name} placeholder='First Name' onChange={this.handleChange}/>
 							<Form.Input name="last_name" value={this.state.last_name} placeholder='Last Name' onChange={this.handleChange}/><br />
@@ -58,9 +59,16 @@ class SignupForm extends React.Component{
 									Signup
 								<Icon name='right arrow' />
 							</Button>
-						<div className='alert'>
+						{/* <div className='alert'>
 							{this.state.alert}
-						</div>
+						</div> */}
+						{this.state.alert ?
+						<Message
+							error
+							// header='Invalid Signup'
+							content='Please ensure username is unique and password fields match.'
+						/>
+						: ''}
 						<div className='checkbox'>
 							<Form.Checkbox label='I agree to the Terms and Conditions' defaultChecked />
 						</div>

@@ -42,7 +42,7 @@ class LoginForm extends React.Component{
 					<div className='freelance-logo'>
 						<h1 id="freelance-logo-title">Freestyle</h1>
 					</div>
-	        <Form id='welcome-form' error>
+	        <Form error id='welcome-form'>
 				    <Form.Group widths='equal'>
 				      <Form.Input name="username" value={this.state.username} placeholder='Username' onChange={this.handleChange} />
 				      <Form.Input type="password" name="password" value={this.state.password} placeholder='Password' onChange={this.handleChange} />
@@ -57,7 +57,7 @@ class LoginForm extends React.Component{
 							{this.state.alert ?
 							<Message
 								error
-								header='Invalid Login'
+								// header='Invalid Login'
 								content='The username and/or password entered is incorrect.'
 							/>
 							: ''}
