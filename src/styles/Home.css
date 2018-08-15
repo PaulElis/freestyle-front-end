@@ -1,13 +1,10 @@
 div.home-container {
   background-color: white;
-  /* padding-top: 10px; */
-  /* margin: 0px 2% 0px 2%; */
-  /* padding: 10px 2% 0px 2%; */
 }
 
 div.home-about-container{
   display: flex;
-  padding: 100px 6% 0px 0%;
+  padding: 6% 6% 0% 0%;
   /* border: 1px solid green; */
 }
 
@@ -18,12 +15,10 @@ img.home-image {
 }
 
 div.home-about {
-  /* color: #2F8284; */
   text-align: left;
-  line-height: 35px;
   background-color: white;
   width: 60%;
-  padding: 60px 80px 0px 75px;
+  padding: 5% 7% 0% 6%;
   /* border: 1px solid green; */
 }
 
@@ -38,14 +33,14 @@ p#home-about-text{
   font-size: 20px;
   letter-spacing: 3px;
   line-height: 35px;
-  padding-top: 30px;
+  padding-top: 5%;
 }
 
 div.home-review-container {
   font-size: 20px;
   background-color: white;
-  padding-top: 150px;
-  padding-bottom: 150px;
+  padding-top: 14%;
+  padding-bottom: 14%;
 }
 
 div#home-review-title{
@@ -59,5 +54,5 @@ p#home-review-text{
   font-size: 21px;
   letter-spacing: 2px;
   line-height: 35px;
-  padding: 30px 15% 0px 15%;
+  padding: 2% 15% 0% 15%;
 }

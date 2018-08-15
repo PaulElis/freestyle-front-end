@@ -1,6 +1,6 @@
 div.freelance-logo {
-  padding-top: 160px;
-  padding-bottom: 10px;
+  padding-top: 12%;
+  padding-bottom: 1%;
   background-color: #FAF9F9;
 }
 
@@ -15,7 +15,7 @@ div.freelance-logo {
 
 div.welcome-container {
   background-color: #FAF9F9;
-  padding-bottom: 325px;
+  padding-bottom: 20%;
 }
 
 #welcome-form {
@@ -26,15 +26,9 @@ div.welcome-container {
   border-radius: 10px;
   /* border: 1px solid #28929E; */
   border: 1px solid #EAEAEA;
-  padding: 25px;
-}
-
-div.alert {
-  color: red;
-  padding-bottom: 10px;
+  padding: 2%;
 }
 
 div.checkbox {
-  padding-bottom: 10px;
-
+  padding-bottom: 2%;
 }
