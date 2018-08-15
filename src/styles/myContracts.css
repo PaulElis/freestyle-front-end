@@ -3,8 +3,7 @@ div.myContracts-container {
 }
 
 #myContracts-grid {
-  margin-top: 15px;
-  /* padding-left: 150px */
+  margin-top: 1%;
 }
 
 #contracts-title {
@@ -12,9 +11,9 @@ div.myContracts-container {
   letter-spacing: 2px;
   font-family: 'PT Sans Narrow', sans-serif;
   margin-left: 20px;
-  padding: 10px 0px 0px 70px;
+  padding: 1% 0% 0% 5.3%;
 }
 
 div.three.column.row {
-  padding: 10px 0px 10px 20px;
+  padding: 1% 0% 1% 1.8%;
 }
