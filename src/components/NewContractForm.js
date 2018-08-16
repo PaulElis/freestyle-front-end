@@ -231,12 +231,12 @@ class NewContractForm extends React.Component{
                       <Message
                         success
                         // header='Form Completed'
-                        content="Contract submitted." 
+                        content="Contract submitted."
                       />
                     : null}
                   {/* </div> */}
                 <br />
-                <Button color='white' compact fluid type="submit" size='large' disabled={this.state.approved} >Submit</Button>
+                <Button compact fluid type="submit" size='large' disabled={this.state.approved} >Submit</Button>
               </Form>
           </div>
 

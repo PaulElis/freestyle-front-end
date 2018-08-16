@@ -1,44 +1,23 @@
 div.new-contract-form-container {
   background-color: white;
-  /* height: 100%; */
   display: flex;
-  padding: 0px 75px 0px 50px;
+  padding: 0% 3% 0% 4%;
 }
 
 #contract-label {
   font-family: 'PT Sans Narrow', sans-serif;
   letter-spacing: 3px;
   font-weight: bold;
-  padding-top: 8px;
-  padding-bottom: 8px;
-}
-
-#form-alert {
-  color: red;
-  padding-top: 10px;
-  font-weight: bold;
-  font-size: 20px;
-  text-shadow: 2px 2px 0 black;
+  padding-top: 1.5%;
+  padding-bottom: 1.5%;
 }
 
 #left-button {
-  margin-left: 40px;
-  padding-left: 40px;
-  padding-right: 40px;
-}
-
-#developer-approve {
-  padding-right: 530px;
-}
-
-#contractor-approve {
-  padding-left: 35px;
+  margin-left: 8%;
 }
 
 #right-button {
-  margin-right: 40px;
-  padding-left: 40px;
-  padding-right: 40px;
+  margin-right: 8%;
 }
 
 div.contract {
@@ -46,41 +25,22 @@ div.contract {
   background-color: white;
   width: 65%;
   float: right;
-  /* border: 1px solid #EAEAEA; */
-  padding-top: 40px;
-  padding-bottom: 40px;
-  /* box-shadow: 0px 10px 10px grey; */
-  padding-left: 120px;
-  padding-right: 120px;
-  font-size: 20px;
+  padding: 2.5% 7% 2.5% 7%;
   font-family: 'Indie Flower', cursive;
+  font-size: 20px;
   letter-spacing: 2px;
   line-height: 25px;
 }
 
 div.new-contract-form {
   width: 35%;
-  border: 1px solid white;
-  padding: 25px;
-  /* background-color: #8b9dc3; */
+  padding: 2%;
   background-color: white;
-  color: black;
   letter-spacing: 3px;
-  /* box-shadow: 0px 10px 10px grey; */
-  float: left;
+  /* float: left; */
 }
 
 #new-contract-label{
   text-align: left;
   font-size: 15px;
-}
-
-#success-alert {
-  color: #2dc937;
-  letter-spacing: 3px;
-  font-weight: 900;
-  text-shadow: 1px 1px 0 white;
-  font-size: 20px;
-  padding-top: 5px;
-  padding-bottom: 5px;
 }

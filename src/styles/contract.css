@@ -1,32 +1,18 @@
 a.ui.blue.centered.card {
-  /* padding: 15px 0px 15px 0px; */
   height: 23rem;
 }
 
 #contracts-content{
-  padding-top: 25px
+  padding-top: 8%;
 }
 
 #contracts-header{
-  padding: 0px 0px 0px 0px;
   font-size: 20px;
 }
 
 #contracts-meta{
-  padding: 5px 20px 0px 20px;
+  padding: 2% 9% 0% 9%;
   letter-spacing: 1px;
   line-height: 23px;
   font-size: 15px;
-}
-
-#contracts-description{
-  padding: 5px 0px 0px 0px;
-  font-size: 12px;
-}
-
-
-#card-caption {
-  /* text-align: left; */
-  text-decoration: underline;
-  /* padding-left: 20px; */
 }
