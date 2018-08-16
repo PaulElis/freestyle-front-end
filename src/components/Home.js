@@ -11,7 +11,6 @@ class Home extends React.Component{
 
     return(
       <div className="home-container">
-
         <div className='home-about-container'>
           <div className="home-about">
             <div id='home-about-title'>Where Freelance Happens</div>

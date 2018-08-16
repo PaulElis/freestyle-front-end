@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import {getUser} from '../actions/actions'
-import { Image, Icon, Card } from 'semantic-ui-react'
+import { Image, Card } from 'semantic-ui-react'
 import '../styles/myProfile.css'
 
 class MyProfile extends React.Component{

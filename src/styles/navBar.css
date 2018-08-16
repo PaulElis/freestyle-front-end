@@ -1,18 +1,36 @@
-div.navBar-container {
-  padding: 8px 60px 8px 60px;
-  background-color: white;
-  color: white;
-  z-index: 1;
-  border-bottom: solid;
-  border-width: 0.05px;
-  border-color: #F0EFEF;
+@media only screen and (max-width: 600px) {
+  div.navBar-container {
+    /* width: 100%; */
+    background-color: white;
+    border-bottom: solid;
+    border-width: 0.05px;
+    border-color: #F0EFEF;
+  }
+
+  #navbar-freelance-logo-title {
+    color: #FB6424;
+    font-family: serif;
+    font-weight: bold;
+    font-size: 20px;
+  }
 }
 
-#navbar-freelance-logo-title {
-  color: #FB6424;
-  font-family: serif;
-  font-weight: bold;
-  /* font-family: 'Pacifico', cursive; */
-  /* letter-spacing: 1px; */
-  font-size: 30px;
+
+@media only screen and (min-width: 601px) {
+  div.navBar-container {
+    padding: 8px 60px 8px 60px;
+    background-color: white;
+    color: white;
+    z-index: 1;
+    border-bottom: solid;
+    border-width: 0.05px;
+    border-color: #F0EFEF;
+  }
+
+  #navbar-freelance-logo-title {
+    color: #FB6424;
+    font-family: serif;
+    font-weight: bold;
+    font-size: 30px;
+  }
 }
