@@ -1,46 +1,93 @@
-div.new-contract-form-container {
-  background-color: white;
-  display: flex;
-  padding: 0% 3% 0% 4%;
+  /* For Mobile */
+@media only screen and (max-width: 600px) {
+  div.new-contract-form-container {
+    background-color: white;
+    display: flex;
+    padding: 0% 2% 0% 2%;
+  }
+
+  div.contract {
+    background-color: white;
+    width: 65%;
+    float: right;
+    padding: 5% 7% 2.5% 7%;
+    font-family: 'Indie Flower', cursive;
+    font-size: 20px;
+    letter-spacing: 2px;
+    line-height: 35px;
+  }
+
+  #contract-label {
+    font-family: 'PT Sans Narrow', sans-serif;
+    letter-spacing: 3px;
+    font-weight: bold;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+  }
+
+  #left-button {
+  }
+
+  #right-button {
+  }
+
+  div.new-contract-form {
+    width: 35%;
+    padding: 2%;
+    background-color: white;
+    letter-spacing: 3px;
+  }
+
+  #new-contract-label{
+    text-align: left;
+    font-size: 15px;
+  }
 }
 
-#contract-label {
-  font-family: 'PT Sans Narrow', sans-serif;
-  letter-spacing: 3px;
-  font-weight: bold;
-  padding-top: 1.5%;
-  padding-bottom: 1.5%;
-}
+  /* For Web */
+@media only screen and (min-width: 601px) {
+  div.new-contract-form-container {
+    background-color: white;
+    display: flex;
+    padding: 0% 3% 0% 4%;
+  }
 
-#left-button {
-  margin-left: 8%;
-}
+  #contract-label {
+    font-family: 'PT Sans Narrow', sans-serif;
+    letter-spacing: 3px;
+    font-weight: bold;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+  }
 
-#right-button {
-  margin-right: 8%;
-}
+  #left-button {
+    margin-left: 8%;
+  }
 
-div.contract {
-  /* background-image: url('http://www.designbolts.com/wp-content/uploads/2012/12/Vintage-Speckles-White-Seamless-Pattern-For-Website-Background.jpg'); */
-  background-color: white;
-  width: 65%;
-  float: right;
-  padding: 2.5% 7% 2.5% 7%;
-  font-family: 'Indie Flower', cursive;
-  font-size: 20px;
-  letter-spacing: 2px;
-  line-height: 25px;
-}
+  #right-button {
+    margin-right: 8%;
+  }
 
-div.new-contract-form {
-  width: 35%;
-  padding: 2%;
-  background-color: white;
-  letter-spacing: 3px;
-  /* float: left; */
-}
+  div.contract {
+    background-color: white;
+    width: 65%;
+    float: right;
+    padding: 2.5% 7% 2.5% 7%;
+    font-family: 'Indie Flower', cursive;
+    font-size: 20px;
+    letter-spacing: 2px;
+    line-height: 25px;
+  }
 
-#new-contract-label{
-  text-align: left;
-  font-size: 15px;
+  div.new-contract-form {
+    width: 35%;
+    padding: 2%;
+    background-color: white;
+    letter-spacing: 3px;
+  }
+
+  #new-contract-label{
+    text-align: left;
+    font-size: 15px;
+  }
 }

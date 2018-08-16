@@ -1,18 +1,47 @@
-a.ui.blue.centered.card {
-  height: 23rem;
+  /* For Mobile */
+@media only screen and (max-width: 600px) {
+  a.ui.blue.centered.card {
+    height: 23rem;
+  }
+
+  #contracts-content{
+    padding-top: 1vh;
+  }
+
+  #contracts-header{
+    font-size: 15px;
+  }
+
+  #contracts-meta{
+    letter-spacing: 1px;
+    line-height: 10px;
+    font-size: 12px;
+  }
+
+  #contracts-extra-content{
+    font-size: 8px;
+    padding-top: 1vh;
+  }
 }
 
-#contracts-content{
-  padding-top: 8%;
-}
+  /* For Web */
+@media only screen and (min-width: 601px) {
+  a.ui.blue.centered.card {
+    height: 23rem;
+  }
 
-#contracts-header{
-  font-size: 20px;
-}
+  #contracts-content{
+    padding-top: 8%;
+  }
 
-#contracts-meta{
-  padding: 2% 9% 0% 9%;
-  letter-spacing: 1px;
-  line-height: 23px;
-  font-size: 15px;
+  #contracts-header{
+    font-size: 20px;
+  }
+
+  #contracts-meta{
+    padding: 2% 9% 0% 9%;
+    letter-spacing: 1px;
+    line-height: 23px;
+    font-size: 15px;
+  }
 }

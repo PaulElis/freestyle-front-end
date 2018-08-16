@@ -19,13 +19,6 @@ class Contract extends React.Component {
 
     return(
         <Grid.Column>
-            {/* <div className="ui max width centered raised link cards" >
-              <div className="card" color='red' style={{height: '15 rem'}} id='card' onClick={this.handleClick}>
-                <h3>{this.props.contract.title.slice(0, 30)}</h3>
-                <h4 id='card-caption'>Summary</h4> {this.props.contract.summary.slice(0, 200)}
-                <h4 id='card-caption'>Compensation</h4> ${this.props.contract.compensation}<br />
-              </div>
-            </div> */}
             <Card centered color='blue' onClick={this.handleClick}>
               <Card.Content id='contracts-content'>
                 <Card.Header id='contracts-header'>
@@ -39,7 +32,7 @@ class Contract extends React.Component {
                 <br />
                 <br />
               </Card.Content>
-              <Card.Content extra>
+              <Card.Content id='contracts-extra-content' extra>
                 <span className="left floated">
                   Compensation
                 </span>

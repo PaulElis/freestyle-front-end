@@ -256,7 +256,7 @@ class NewContractForm extends React.Component{
           <p id='contract-label'>Compensation</p> {`${this.state.compensation}`}<br />
             <br />
             <br />
-          <div>
+        <div>
             {this.props.contract && this.props.contract.developer_id === this.props.currentUser.id ?
               <Button animated='fade' id='left-button' labelPosition='left' size='large' disabled={this.state.approved} icon floated='left' toggle active={developer_signature} onClick={this.handleDeveloperToggle}>
                 <Button.Content visible>
