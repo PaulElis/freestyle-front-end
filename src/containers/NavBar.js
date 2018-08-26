@@ -32,9 +32,6 @@ class NavBar extends React.Component {
           </Menu.Item>
         </Menu.Menu>
         <Menu.Menu position='right'>
-          {/* <Menu.Item>
-            <Input icon='search' placeholder='Search...' />
-          </Menu.Item> */}
           <Menu.Item id="navBar-item" name='My Contracts' active={activeItem === 'messages'} onClick={() => {
             this.props.history.push('/contracts')}} >
             <Icon name='folder' color='black' size='big' />

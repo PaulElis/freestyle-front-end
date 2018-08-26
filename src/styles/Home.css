@@ -1,4 +1,69 @@
-  /* For Mobile */
+  /* For iPhone 6 6s 7 8 */
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+
+  div.home-container {
+    padding: 3vh;
+    /* border: 1px solid yellow; */
+  }
+
+  div.home-about-container{
+    /* border: 1px solid green; */
+  }
+
+  div.home-about {
+    text-align: left;
+    display: block;
+    /* border: 1px solid blue; */
+  }
+
+  img.home-image {
+    width: 100%;
+    height: 100%;
+  }
+
+  div#home-about-title{
+    padding-top: 12%;
+    font-family: serif;
+    font-size: 60px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 60px;
+  }
+
+  p#home-about-text{
+    padding-top: 20%;
+    padding-bottom: 19%;
+    font-size: 25px;
+    letter-spacing: 3px;
+    line-height: 35px;
+  }
+
+  div.home-review-container {
+    /* font-size: 20px; */
+  }
+
+  div#home-review-title{
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    font-family: serif;
+    font-size: 35px;
+    font-weight: bold;
+    line-height: 35px;
+  }
+
+  p#home-review-text{
+    font-size: 25px;
+    letter-spacing: 2px;
+    line-height: 35px;
+  }
+
+}
+
+  /* For Web Below 600px */
 @media only screen and (max-width: 600px) {
 
   div.home-container {
@@ -22,16 +87,17 @@
   }
 
   div#home-about-title{
-    padding-top: 2vh;
+    padding-top: 12%;
     font-family: serif;
     font-size: 60px;
     font-weight: bold;
+    letter-spacing: 1px;
     line-height: 60px;
   }
 
   p#home-about-text{
-    padding-top: 2vh;
-    padding-bottom: 2vh;
+    padding-top: 20%;
+    padding-bottom: 19%;
     font-size: 25px;
     letter-spacing: 3px;
     line-height: 35px;
@@ -45,7 +111,7 @@
     padding-top: 2vh;
     padding-bottom: 2vh;
     font-family: serif;
-    font-size: 40px;
+    font-size: 35px;
     font-weight: bold;
     line-height: 35px;
   }
