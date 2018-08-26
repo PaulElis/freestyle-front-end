@@ -1,6 +1,35 @@
+  /* Landscape iPhone 6+ 7+ 8+ */
+@media only screen
+  and (min-device-width: 414px)
+  and (max-device-width: 736px)
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) {
 
-/* For Mobile */
-@media only screen and (max-width: 600px) {
+  div.myProfile-container {
+    padding: 3.5% 0% 3.5% 0%;
+    color: black;
+  }
+
+  div.ui.blue.centered.card{
+    padding: 1.5% 0px 0px 0px;
+  }
+
+  #profile-icon{
+    align-content: center;
+  }
+
+  #profile-header{
+    padding: 8% 5% 8% 5%;
+  }
+}
+
+
+  /* Portrait iPhone 6+ 7+ 8+ */
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 812px)
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) {
   div.myProfile-container {
     padding: 40% 0% 0% 0%;
     color: black;
@@ -19,8 +48,12 @@
   }
 }
 
-/* For Mobile */
-@media only screen and (min-width: 601px) {
+  /* For Web */
+@media screen
+  and (min-device-width: 1200px)
+  and (max-device-width: 1600px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) {
   div.myProfile-container {
     padding: 13% 0% 0% 0%;
     color: black;
@@ -39,44 +72,42 @@
   }
 }
 
-/* p#myProfile-text{
-  font-size: 15px;
-  font-weight: bold;
-  padding: 15px 0px 0px 0px;
-  line-height: 25px;
-} */
-
-/* div.myProfile-info {
+  /* For Web below 600 pixels */
+/* @media only screen and (max-width: 600px) {
+div.myProfile-container {
+  padding: 40% 0% 0% 0%;
   color: black;
-  border-color: #28929E;
-  border-color: black;
-  border-style: solid;
-  border-width: 1px;
-  border-radius: 10px;
-  padding: 50px;
-  margin-left: 40%;
-  margin-right: 40%;
+}
+
+div.ui.blue.centered.card{
+  padding: 1.5% 0px 0px 0px;
+}
+
+#profile-icon{
+  align-content: center;
+}
+
+#profile-header{
+  padding: 8% 5% 8% 5%;
+}
 } */
 
-/* div.ui.modal.transition.visible.active.myProfile-info {
-  background-color: #8b9dc3;
-  border-style: solid;
-  border-color: white;
-  border-width: 2px;
-  border-radius: 5px;
-  color: white;
-  text-shadow: black 0.1em 0.1em 0.2em;
-  margin: auto;
-  top: 50%;
-  position: relative;
-  width: 50%;
-  padding: 60px;
-} */
+  /* For Web */
+/* @media only screen and (min-width: 737px) {
+  div.myProfile-container {
+    padding: 13% 0% 0% 0%;
+    color: black;
+  }
 
-/* body {
-  background-color: #FFB697;
-} */
+  div.ui.blue.centered.card{
+    padding: 1.5% 0px 0px 0px;
+  }
 
-/* #profile-image {
-  height: 20%;
+  #profile-icon{
+    align-content: center;
+  }
+
+  #profile-header{
+    padding: 8% 5% 8% 5%;
+  }
 } */

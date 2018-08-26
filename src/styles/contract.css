@@ -1,4 +1,31 @@
-  /* For Mobile */
+  /* For iPhone 6+ 7+ 8+ */
+@media only screen
+  and (min-device-width: 414px)
+  and (max-device-width: 736px)
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) {
+
+  a.ui.blue.centered.card {
+    height: 30rem;
+  }
+
+  #contracts-content{
+    padding-top: 8%;
+  }
+
+  #contracts-header{
+    font-size: 20px;
+  }
+
+  #contracts-meta{
+    padding: 2% 9% 0% 9%;
+    letter-spacing: 1px;
+    line-height: 23px;
+    font-size: 15px;
+  }
+}
+
+  /* For Web below 600 pixels */
 @media only screen and (max-width: 600px) {
   a.ui.blue.centered.card {
     height: 23rem;
@@ -25,7 +52,7 @@
 }
 
   /* For Web */
-@media only screen and (min-width: 601px) {
+@media only screen and (min-width: 737px) {
   a.ui.blue.centered.card {
     height: 23rem;
   }

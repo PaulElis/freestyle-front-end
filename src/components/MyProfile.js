@@ -6,19 +6,9 @@ import '../styles/myProfile.css'
 
 class MyProfile extends React.Component{
 
-  // state={
-  //   modal: true
-  // }
-
   componentDidMount(){
     this.props.getUser()
   }
-
-  // exitModal = () => {
-  //   this.setState({
-  //     modal: false
-  //   })
-  // }
 
   render(){
     // console.log('line 14 props:', this.props.currentUser);
@@ -29,23 +19,7 @@ class MyProfile extends React.Component{
 
     return(
       <div className='myProfile-container'>
-        {/* <Modal className='myProfile-info'>
-          <Modal.Header><h2>MyProfile</h2></Modal.Header>
-          <Modal.Content image>
-            <Image id='profile-image' circular centered size='medium' src='https://www.watsonmartin.com/wp-content/uploads/2016/03/default-profile-picture.jpg' />
-            <Modal.Description>
-              <Header>Username: {currentUsername} </Header>
-              <p>Full Name: {currentFirstname} {currentLastname} </p>
-            </Modal.Description>
-          </Modal.Content>
-        </Modal> */}
-          {/* <div className='myProfile-info'>
-              <Icon name='user outline' size='huge' />
-            <p id='myProfile-text'>Username: {currentUsername} <br />
-            Full Name: {currentFirstname} {currentLastname} </p>
-          </div> */}
           <Card centered color='blue' onClick={this.handleClick}>
-            {/* <Icon center id='profile-icon' name='user outline' size='massive' /> */}
             <Image id='profile-image' circular centered size='small' src='https://www.watsonmartin.com/wp-content/uploads/2016/03/default-profile-picture.jpg' />
             <Card.Header id='profile-header'>
               <span className="left floated">
