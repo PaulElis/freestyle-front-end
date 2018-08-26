@@ -44,8 +44,8 @@ class LoginForm extends React.Component{
 					</div>
 	        <Form error id='welcome-form'>
 				    <Form.Group widths='equal'>
-				      <Form.Input name="username" value={this.state.username} placeholder='Username' onChange={this.handleChange} />
-				      <Form.Input type="password" name="password" value={this.state.password} placeholder='Password' onChange={this.handleChange} />
+				      <Form.Input fluid name="username" value={this.state.username} placeholder='Username' onChange={this.handleChange} />
+				      <Form.Input fluid type="password" name="password" value={this.state.password} placeholder='Password' onChange={this.handleChange} />
 						</Form.Group>
 							<Button fluid size='large' color='blue' icon labelPosition='right' onClick={this.handleLogin}>
 									Login

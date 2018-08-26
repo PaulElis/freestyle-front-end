@@ -47,13 +47,13 @@ class SignupForm extends React.Component{
 					</div>
 					<Form error id='welcome-form'>
 				    <Form.Group widths='equal'>
-							<Form.Input name="first_name" value={this.state.first_name} placeholder='First Name' onChange={this.handleChange}/>
-							<Form.Input name="last_name" value={this.state.last_name} placeholder='Last Name' onChange={this.handleChange}/><br />
+							<Form.Input fluid name="first_name" value={this.state.first_name} placeholder='First Name' onChange={this.handleChange}/>
+							<Form.Input fluid name="last_name" value={this.state.last_name} placeholder='Last Name' onChange={this.handleChange}/><br />
 						</Form.Group>
 							<Form.Input name="username" value={this.state.username} placeholder='Username' onChange={this.handleChange}/>
 						<Form.Group  widths='equal'>
-							<Form.Input type="password" name="password" value={this.state.password} placeholder='Password' onChange={this.handleChange}/>
-							<Form.Input type="password" name="passwordConfirmation" value={this.state.passwordConfirmation} placeholder='Confirm Password' onChange={this.handleChange}/>
+							<Form.Input fluid type="password" name="password" value={this.state.password} placeholder='Password' onChange={this.handleChange}/>
+							<Form.Input fluid type="password" name="passwordConfirmation" value={this.state.passwordConfirmation} placeholder='Confirm Password' onChange={this.handleChange}/>
 						</Form.Group>
 							<Button fluid size='large' color='blue' icon labelPosition='right' onClick={this.handleSubmit}>
 									Signup
