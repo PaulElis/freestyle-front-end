@@ -47,14 +47,12 @@ class LoginForm extends React.Component{
 				      <Form.Input fluid
 								name="username"
 								placeholder='Username'
-								label='Username'
 								value={this.state.username}
 								onChange={this.handleChange} />
 				      <Form.Input fluid
 								type="password"
 								name="password"
 								placeholder='Password'
-								label='Password'
 								value={this.state.password}
 								onChange={this.handleChange} />
 						</Form.Group>
