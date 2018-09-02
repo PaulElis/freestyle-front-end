@@ -1,6 +1,6 @@
 import React from 'react'
 import '../styles/welcome.css'
-import { Button, Form, Icon, Message } from 'semantic-ui-react'
+import { Button, Form, Icon, Message, Label } from 'semantic-ui-react'
 import { connect } from 'react-redux'
 import { login } from '../actions/actions'
 import { NavLink } from 'react-router-dom'
@@ -8,8 +8,8 @@ import { NavLink } from 'react-router-dom'
 class LoginForm extends React.Component{
 
 	state = {
-		username: "",
-		password: "",
+		username: "user_demo",
+		password: "1234",
 		alert: false,
 		signup: false,
 	}
@@ -44,16 +44,24 @@ class LoginForm extends React.Component{
 					</div>
 	        <Form error id='welcome-form'>
 				    <Form.Group widths='equal'>
-				      <Form.Input fluid name="username" value={this.state.username} placeholder='Username' onChange={this.handleChange} />
-				      <Form.Input fluid type="password" name="password" value={this.state.password} placeholder='Password' onChange={this.handleChange} />
+				      <Form.Input fluid
+								name="username"
+								placeholder='Username'
+								label='Username'
+								value={this.state.username}
+								onChange={this.handleChange} />
+				      <Form.Input fluid
+								type="password"
+								name="password"
+								placeholder='Password'
+								label='Password'
+								value={this.state.password}
+								onChange={this.handleChange} />
 						</Form.Group>
 							<Button fluid size='large' color='blue' icon labelPosition='right' onClick={this.handleLogin}>
 									Login
 								<Icon name='right arrow' />
 							</Button>
-						{/* <div className='alert'>
-							{this.state.alert}
-						</div> */}
 							{this.state.alert ?
 							<Message
 								error
@@ -61,10 +69,10 @@ class LoginForm extends React.Component{
 								content='The username and/or password entered is incorrect.'
 							/>
 							: ''}
-						<div className='checkbox'>
+						{/* <div className='checkbox'>
 							<Form.Checkbox label='I agree to the Terms and Conditions' defaultChecked />
-						</div>
-						<div>
+						</div> */}
+						<div id='welcome-message'>
 							Don't have an account? <NavLink to="/signup">Sign up</NavLink>
 						</div>
 					</Form>

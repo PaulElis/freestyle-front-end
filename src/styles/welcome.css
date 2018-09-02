@@ -37,6 +37,10 @@ and (orientation: portrait) {
   div.checkbox {
     padding: 1% 0% 2% 0%;
   }
+
+  #welcome-message {
+    padding: 3% 0% 0% 0%;
+  }
 }
 
   /* Landscape iPhone 6+ 7+ 8+ */
@@ -47,7 +51,7 @@ and (-webkit-min-device-pixel-ratio: 3)
 and (orientation: landscape) {
 
   div.freelance-logo {
-    padding-top: 7%;
+    padding-top: 3%;
     padding-bottom: 1%;
     background-color: #FAF9F9;
   }
@@ -119,10 +123,14 @@ and (orientation: landscape) {
     background-color: white;
     border-radius: 10px;
     border: 1px solid #EAEAEA;
-    padding: 2%;
+    padding: 1%;
   }
 
-  div.checkbox {
+  /* div.checkbox {
     padding: 1% 0% 2% 0%;
+  } */
+
+  #welcome-message {
+    padding: 3% 0% 0% 0%;
   }
 }

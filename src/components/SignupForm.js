@@ -69,10 +69,10 @@ class SignupForm extends React.Component{
 							content='Please ensure username is unique and password fields match.'
 						/>
 						: ''}
-						<div className='checkbox'>
+						{/* <div className='checkbox'>
 							<Form.Checkbox label='I agree to the Terms and Conditions' defaultChecked />
-						</div>
-						<div>
+						</div> */}
+						<div id='welcome-message'>
 							Already have an account? <NavLink to="/login">Log in</NavLink>
 						</div>
 					</Form>
