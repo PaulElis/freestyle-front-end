@@ -1,6 +1,6 @@
 import React from 'react'
 import '../styles/welcome.css'
-import { Button, Form, Icon, Message, Label } from 'semantic-ui-react'
+import { Button, Form, Icon, Message } from 'semantic-ui-react'
 import { connect } from 'react-redux'
 import { login } from '../actions/actions'
 import { NavLink } from 'react-router-dom'

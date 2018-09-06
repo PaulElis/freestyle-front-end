@@ -1,14 +1,13 @@
 import React from 'react'
 import {connect} from 'react-redux'
+import freestyle from '../images/freelancer.jpg'
 import '../styles/home.css'
 
 class Home extends React.Component{
   state={}
 
   render(){
-
     // console.log(this.props);
-
     return(
       <div className="home-container">
         <div className='home-about-container'>
@@ -18,7 +17,7 @@ class Home extends React.Component{
             Experience a seamless transition from concept to completion with mutually outlined expectations.
             </p>
           </div>
-          <img className="home-image" src='http://workplaceinsight.net/wp-content/uploads/2017/11/Flexible-working-offer.jpg' alt='oh no!'/>
+          <img className="home-image" src={freestyle} alt='oh no!'/>
         </div>
 
           <div className="home-review-container">

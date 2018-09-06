@@ -2,6 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import {getUser} from '../actions/actions'
 import { Image, Card } from 'semantic-ui-react'
+import profile from '../images/profile.jpg'
 import '../styles/myProfile.css'
 
 class MyProfile extends React.Component{
@@ -12,7 +13,6 @@ class MyProfile extends React.Component{
 
   render(){
     // console.log('line 14 props:', this.props.currentUser);
-
     const currentUsername = this.props.currentUser ? this.props.currentUser.username : ''
     const currentFirstname = this.props.currentUser ? this.props.currentUser.first_name : ''
     const currentLastname = this.props.currentUser ? this.props.currentUser.last_name : ''
@@ -20,7 +20,7 @@ class MyProfile extends React.Component{
     return(
       <div className='myProfile-container'>
           <Card centered color='blue' onClick={this.handleClick}>
-            <Image id='profile-image' circular centered size='small' src='https://www.watsonmartin.com/wp-content/uploads/2016/03/default-profile-picture.jpg' />
+            <Image id='profile-image' circular centered size='small' src={profile} />
             <Card.Header id='profile-header'>
               <span className="left floated">
                 Username
