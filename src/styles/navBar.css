@@ -1,10 +1,11 @@
 @media only screen and (max-width: 600px) {
   div.navBar-container {
-    /* width: 100%; */
     background-color: white;
     border-bottom: solid;
     border-width: 0.05px;
     border-color: #F0EFEF;
+    position: fixed;
+    width: 100%;
   }
 
   #navbar-freelance-logo-title {
@@ -25,6 +26,8 @@
     border-bottom: solid;
     border-width: 0.05px;
     border-color: #F0EFEF;
+    position: fixed;
+    width: 100%;
   }
 
   #navbar-freelance-logo-title {

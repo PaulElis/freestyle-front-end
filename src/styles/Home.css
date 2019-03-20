@@ -1,16 +1,10 @@
 div.home-container {
   padding: 3vh;
-  /* border: 1px solid yellow; */
-}
-
-div.home-about-container{
-  /* border: 1px solid green; */
 }
 
 div.home-about {
   text-align: left;
   display: block;
-  /* border: 1px solid blue; */
 }
 
 img.home-image {
@@ -33,10 +27,6 @@ p#home-about-text{
   font-size: 25px;
   letter-spacing: 3px;
   line-height: 35px;
-}
-
-div.home-review-container {
-  /* font-size: 20px; */
 }
 
 div#home-review-title{
@@ -63,7 +53,7 @@ div.home-container {
 }
 
 div.home-about-container{
-  /* border: 1px solid green; */
+  margin-top: 25px;
 }
 
 div.home-about {
@@ -123,13 +113,12 @@ div.home-container {
 div.home-about-container{
   display: flex;
   padding: 6% 6% 0% 0%;
-  /* border: 1px solid green; */
+  margin-top: 50px;
 }
 
 img.home-image {
   width: 40%;
   height: 40%;
-  /* border: 1px solid green; */
 }
 
 div.home-about {
@@ -137,7 +126,6 @@ div.home-about {
   background-color: white;
   width: 60%;
   padding: 5% 7% 0% 6%;
-  /* border: 1px solid green; */
 }
 
 div#home-about-title{
